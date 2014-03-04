@@ -1,11 +1,23 @@
-#body {
+* { 
+	margin: 0px;
+	padding: 0px;
+}
 
-	/* Sätter bakgrunden så att den fyller ut rutan, inte repeteras och inte ändras när man skrollar*/
-	background:url(images/main_background.jpg);
-	background-attachment:fixed;
-	background-repeat:no-repeat;
+body {
 
-	background-size:100% 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#container {
+	position: relative;
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 2%;
+	min-height: 100%;
+	margin: auto;
 }
 
 /* HEADER */
@@ -15,15 +27,25 @@
 	border-top: 0px;
 	border-left: 0px;
 	border-right: 0px;
-	position: fixed;
+	position: absolute;
 	top: 0px;
-	width: 70%;
+	width: 100%;
 	height: 10%;
-	margin-left: 15%;
-	margin-right: 15%;
 	background-color: yellow;
 	background: rgb(255, 255, 0) transparent ;
 	background: rgba(255, 255, 0, 0.7) ;
+	clear:both;
+}
+
+#main {
+	margin-top: 10%;
+    overflow: auto;   
+}
+
+#mainFrame {
+	background-color: red;	
+	min-height: 200px;
+	width: 100%;
 }
 
 #headertext {
