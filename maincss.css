@@ -1,85 +1,27 @@
-* { 
-	margin: 0px;
-	padding: 0px;
-}
-
+html,
 body {
-
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
+   margin:0;
+   padding:0;
+   height:100%;
 }
-
 #container {
-	position: relative;
-	width: 70%;
-	margin-left: 15%;
 	margin-right: 15%;
-	margin-top: 2%;
-	min-height: 100%;
-	margin: auto;
+	margin-left: 15%;
+   min-height:100%;
+   position:relative;
 }
-
-/* HEADER */
-#header {
-	border-style: solid;
-	border-color: #000000;
-	border-top: 0px;
-	border-left: 0px;
-	border-right: 0px;
-	position: absolute;
-	top: 0px;
-	width: 100%;
-	height: 10%;
-	background-color: yellow;
-	background: rgb(255, 255, 0) transparent ;
-	background: rgba(255, 255, 0, 0.7) ;
-	clear:both;
+header {
+   background:#ff0;
+   padding:10px;
 }
-
-#main {
-	margin-top: 10%;
-    overflow: auto;   
+#body {
+   padding:10px;
+   padding-bottom:60px;   /* Height of the footer */
 }
-
-#mainFrame {
-	background-color: red;	
-	min-height: 200px;
-	width: 100%;
+footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:#6cf;
 }
-
-#headertext {
-	/*background: rgb(255, 255, 255) transparent ;*/
-	margin-left: 30%;
-	color: #000000;
-	text-transform: uppercase;
-	font-size: 40px;
-	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
-}
-
-#header_after_text {
-	/*background: rgb(255, 255, 255) transparent ;*/
-	color: #000000;
-	font-size: 20px;
-	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;	
-}
-
-
-#h2 {
-	color:#000000;
-	text-align:left;
-	font-size: 20px;
-	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-#h3 {
-	color:#000000;
-	text-align:left;
-	font-size: 20px;
-	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
