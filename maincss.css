@@ -14,21 +14,9 @@ body {
 }
 
 
-#flags {
-		float: right;
-}
-
 #content {
 	margin-top: 2%;
 	margin-bottom: 60px;
-}
-
-#rightBar {
-	float: right;
-}
-
-#mainPageBody {
-	float: left;
 }
 
 #footer {
@@ -36,15 +24,8 @@ body {
 	bottom:1%;
 }
 
-
-
 #dropdownMenu {
 	text-align: left;
-}
-
-.companylogo {
-	max-width:300px;
-	max-height:114px;
 }
 
 li
