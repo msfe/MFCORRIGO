@@ -4,6 +4,7 @@ body {
 	margin:0;
 	padding:0;
 	height:100%;
+	overflow: scroll;
 }
 
 
@@ -19,8 +20,7 @@ header {
 
 #content {
 	margin-top: 2%;
-	padding:10px;
-	padding-bottom:60px;   /* Height of the footer */
+
 }
 #rightBar {
 	float: right;
@@ -30,7 +30,7 @@ header {
 }
 
 #footer {
-	position:absolute;
+	position:relative;
 	bottom:1%;
 	width: 100%;
 }
