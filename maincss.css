@@ -6,13 +6,6 @@ body {
 	height:100%;
 }
 
-#container {
-	margin-right: 15%;
-	margin-left: 15%;
-	min-height:100%;
-	position:relative;
-}
-
 
 header {
 	margin-top: 2%;
@@ -21,8 +14,7 @@ header {
 }
 
 #flags {
-	float: right;
-	margin-right: 20%;	
+		float: right;
 }
 
 #content {
