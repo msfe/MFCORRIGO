@@ -21,7 +21,8 @@ header {
 }
 
 #flags {
-	margin-right: 15%;	
+	float: right;
+	margin-right: 20%;	
 }
 
 #body {
