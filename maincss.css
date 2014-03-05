@@ -39,6 +39,11 @@ header {
 	text-align: left;
 }
 
+.companylogo {
+	max-width:300px;
+	max-height:114px;
+}
+
 li
 {
 	float:left;
