@@ -43,6 +43,10 @@ header {
 	width: 100%;
 }
 
+#dropdownMenu {
+	text-align: left;
+}
+
 li
 {
 	float:left;
