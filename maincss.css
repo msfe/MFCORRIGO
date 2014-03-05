@@ -8,9 +8,8 @@ body {
 }
 
 
-header {
+#header {
 	margin-top: 2%;
-	background:#ff0;
 	padding:10px;
 }
 
@@ -34,6 +33,8 @@ header {
 	bottom:1%;
 	width: 100%;
 }
+
+
 
 #dropdownMenu {
 	text-align: left;
@@ -154,6 +155,7 @@ body {
 }
 .marketing h2 {
   font-weight: normal;
+  font-size: 12px;
 }
 .marketing .col-lg-4 p {
   margin-right: 10px;
