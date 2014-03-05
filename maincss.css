@@ -4,7 +4,7 @@ body {
 	margin:0;
 	padding:0;
 	height:100%;
-	overflow: scroll;
+	overflow: auto;
 }
 
 
@@ -20,6 +20,7 @@ header {
 
 #content {
 	margin-top: 2%;
+	margin-bottom: 150px;
 
 }
 #rightBar {
@@ -32,7 +33,6 @@ header {
 #footer {
 	position:relative;
 	bottom:1%;
-	width: 100%;
 }
 
 #dropdownMenu {
