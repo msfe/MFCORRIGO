@@ -25,11 +25,16 @@ header {
 	margin-right: 20%;	
 }
 
-#body {
+#content {
 	margin-top: 2%;
-	background-color: purple;
 	padding:10px;
 	padding-bottom:60px;   /* Height of the footer */
+}
+#rightBar {
+	float: right;
+}
+#mainPageBody {
+	float: left;
 }
 
 #footer {
