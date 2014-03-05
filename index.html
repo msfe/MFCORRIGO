@@ -5,6 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link type="text/css" rel="stylesheet" media="screen" href="maincss.css" />
+	<!-- Bootstrap -->
+	<link href="libs/bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
 
 	<title>MFCORRIGO</title>
 	
@@ -13,24 +16,37 @@
 <body>
 
 	<div id="container">
-		<header>
-			<tr>
-				<h1> MFcorrigo </h1>
 
-				<td><img src="res/swedishflag.jpg" id="swedishflag" height="42" width="42">
-				</td>
+		<div class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">MFcorrigo</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#Start">Start</a></li>
+						<li><a href="#Tjänster">Tjänster</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tidigare project<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Support Ticket</a></li>
+								<li><a href="#">Knoledge Base</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Contributions</a></li>
+							</ul>
+						</li>
+						<li><a href="#Tidigare projekt">Om oss</a></li>
+						<li><a href="#Tidigare projekt">Kontakt</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><img src="res/swedishflag.jpg" id="swedishflag" height="42" width="42"></a></li>
+						<li><a href="#"><img src="res/british-flag.jpg" id="englishflag" height="42" width="42"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
-				<td><img src="res/british-flag.jpg" id="englishflag" height="42" width="42">
-				</td>
-			</tr>
-			<ul id="navigation-bar">
-				<li><a href="#Start">Start</a></li>
-				<li><a href="#Tjänster">Tjänster</a></li>
-				<li><a href="#Tidigare projekt">Tidigare project</a></li>
-				<li><a href="#Om oss">Om oss</a></li>
-				<li><a href="#Kontakt">Kontakt</a></li>
-			</ul>
-		</header>
 
 		<div id="body">
 			Här kommer massa fin info
@@ -44,8 +60,9 @@
 </body>
 
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="libs/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 <script src="js/languages.js"></script>
 <script src="js/languageHandler.js"></script>
 </html>
