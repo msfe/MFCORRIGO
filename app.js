@@ -1,42 +1,59 @@
 $(function() {
-	
+	goToStart();
 });
 
+function remove() {
+	document.getElementById("startView").style.display = 'none';
+	document.getElementById("aboutView").style.display = 'none';
+	document.getElementById("servicesView").style.display = 'none';
+	document.getElementById("contactView").style.display = 'none';
+	document.getElementById("ourBuildingsView").style.display = 'none';
+	document.getElementById("reconstructionView").style.display = 'none';
+	document.getElementById("interioursView").style.display = 'none';
+	document.getElementById("fromConstructionView").style.display = 'none';
+	document.getElementById("bathroomsView").style.display = 'none';	
+}
 function goToStart(){
-	alert("start");
+	remove();
+	document.getElementById("startView").style.display = 'block';
 }
 
 function goToServices(){
-	alert("services");
-}
-
-function goToEarlierProjects() {
+	remove();
+	document.getElementById("servicesView").style.display = 'block';
 }
 
 function goToAbout() {
-	alert("about");
+	remove();
+	document.getElementById("aboutView").style.display = 'block';	
 }
 
 function goToContact() {
-	alert("contact");
+	remove();
+	document.getElementById("contactView").style.display = 'block';
 }
 
 function goToOurBuildings() {
-	alert("our buildings");
+	remove();
+	document.getElementById("ourBuildingsView").style.display = 'block';
 }
 
 function goToReconstruction() {
-	alert("reconstruction");
+	remove();
+	document.getElementById("reconstructionView").style.display = 'block';
 }
 
 function goToBathroom() {
-	alert("bathroom");
+	remove();
+	document.getElementById("bathroomsView").style.display = 'block';
 }
 
 function goToInteriours() {
-	alert("interiours");
+	remove();
+	document.getElementById("interioursView").style.display = 'block';
 }
 
 function goToFromConstruction() {
-	alert("from construction");
+	remove();
+	document.getElementById("fromConstructionView").style.display = 'block';
 }
