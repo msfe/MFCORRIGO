@@ -32,19 +32,19 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#Start">Start</a></li>
-					<li><a href="#Tjänster">Tjänster</a></li>
+					<li onclick="goToStart()"class="active"><a href="#Start">Start</a></li>
+					<li onclick="goToServices()"><a href="#Tjänster">Tjänster</a></li>
 					<li><a href="#Tidigare Projekt" class="dropdown-toggle" data-toggle="dropdown">Tidigare Projekt<b class="caret"></b></a>
 						<ul class="dropdown-menu" role="menu" data-toggle="dropdown">
-							<li><a href="#" id="dropdownMenu">Våra byggnader</a></li>
-							<li><a href="#" id="dropdownMenu">Tillbyggnader</a></li>
-							<li><a href="#" id="dropdownMenu">Badrum</a></li>
-							<li><a href="#" id="dropdownMenu">Interiörer</a></li>
-							<li><a href="#" id="dropdownMenu">Från bygget</a></li>
+							<li onclick="goToOurBuildings()"><a href="#" id="dropdownMenu">Våra byggnader</a></li>
+							<li onclick="goToReconstruction()"><a href="#" id="dropdownMenu">Tillbyggnader</a></li>
+							<li onclick="goToBathroom()"><a href="#" id="dropdownMenu">Badrum</a></li>
+							<li onclick="goToInteriours()"><a href="#" id="dropdownMenu">Interiörer</a></li>
+							<li onclick="goToFromConstruction()"><a href="#" id="dropdownMenu">Från bygget</a></li>
 						</ul>
 					</li>
-					<li><a href="#Om Oss">Om oss</a></li>
-					<li><a href="#Kontakt">Kontakta oss</a></li>
+					<li onclick="goToAbout()"><a href="#Om Oss">Om oss</a></li>
+					<li onclick="goToContact()"><a href="#Kontakt">Kontakta oss</a></li>
 				</ul>
 
 			</div>
@@ -174,6 +174,7 @@
 		<script src="libs/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 		<script src="js/languages.js"></script>
 		<script src="js/languageHandler.js"></script>
+		<script src="app.js"></script>
 
 	</body>
 	</html>
