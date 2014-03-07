@@ -10,7 +10,7 @@ body {
 
 #header {
 	margin-top: 2%;
-	padding:10px;
+  float: left;
 }
 
 
@@ -58,6 +58,7 @@ a:hover,a:active
 }
 
 
+/* NAVBAR */
 
 
 
