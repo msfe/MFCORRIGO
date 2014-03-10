@@ -1,0 +1,79 @@
+html,
+
+
+/* overridar det vanliga stylesheetet som browsern har*/
+*{ margin:0px; padding: 0px; }
+
+
+#navigationcontainer{
+  background-color: #f2f2f2;
+  width: 100%
+}
+
+#navigation {
+  color: black;
+
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: arial, sans-serif;
+     
+  margin: 0px auto;
+  position: relative;
+  width: 700px;
+  height: 56px;
+}
+
+/* tar bort list-prickarna */
+#navigation ul {
+  list-style-type: none;
+}
+ 
+/*gör att alla elementen i listan kan sättas horisontellt */
+#navigation ul li {
+  float: left;
+  position: relative;
+}
+
+/* sätter var texten ska ligga, tar bort understruket osv */
+#navigation ul li a {
+  color: gray;
+
+  text-align: center;
+  text-decoration: none;
+
+  border-right: 1px solid #A9A9A9;
+  
+  padding: 20px;
+  display: block;
+}
+
+/**/
+#navigation ul li ul {
+  display: none
+}
+
+/**/
+#navigation ul li:hover ul {
+  display: block;
+  position: absolute;
+}
+
+/**/
+#navigation ul li:hover ul li a {
+  display:block;
+
+  background:gray;
+  color:#ffffff;
+
+  text-align: center;
+  width: 135px;
+
+  border-bottom: 1px solid #f2f2f2;
+  border-right: none;
+}
+
+/**/
+#navigation ul li:hover ul li a:hover {
+     background: #8FBC8F;
+     color: #ffffff;
+}
