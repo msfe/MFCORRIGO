@@ -1,5 +1,24 @@
 $(function() {
+	remove();
 	goToStart();
+});
+
+$(function(){
+
+	$('.nav li a').on('click', function(e){
+		remove();
+        // e.preventDefault(); // prevent link click if necessary?
+
+        var $thisLi = $(this).parent('li');
+        var $ul = $thisLi.parent('ul');
+
+        if (!$thisLi.hasClass('active'))
+        {
+        	$ul.find('li.active').removeClass('active');
+        	$thisLi.addClass('active');
+        }
+
+    });
 });
 
 function remove() {
@@ -14,46 +33,37 @@ function remove() {
 	document.getElementById("bathroomsView").style.display = 'none';	
 }
 function goToStart(){
-	remove();
 	document.getElementById("startView").style.display = 'block';
 }
 
 function goToServices(){
-	remove();
 	document.getElementById("servicesView").style.display = 'block';
 }
 
 function goToAbout() {
-	remove();
 	document.getElementById("aboutView").style.display = 'block';	
 }
 
 function goToContact() {
-	remove();
 	document.getElementById("contactView").style.display = 'block';
 }
 
 function goToOurBuildings() {
-	remove();
 	document.getElementById("ourBuildingsView").style.display = 'block';
 }
 
 function goToReconstruction() {
-	remove();
 	document.getElementById("reconstructionView").style.display = 'block';
 }
 
 function goToBathroom() {
-	remove();
 	document.getElementById("bathroomsView").style.display = 'block';
 }
 
 function goToInteriours() {
-	remove();
 	document.getElementById("interioursView").style.display = 'block';
 }
 
 function goToFromConstruction() {
-	remove();
 	document.getElementById("fromConstructionView").style.display = 'block';
 }
