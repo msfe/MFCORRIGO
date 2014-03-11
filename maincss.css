@@ -30,6 +30,10 @@ body {
 	text-align: left;
 }
 
+#moveInFromLeft {
+  margin-left: 2%;
+}
+
 li
 {
 	float:left;

@@ -32,10 +32,10 @@
 
 				<ul class="nav navbar-nav navbar-right">
 					<div class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
+						<ul id = "navigationHeader" class="nav navbar-nav">
 							<li onclick="goToStart()"class="active"><a href="#Start">Start</a></li>
 							<li onclick="goToServices()"><a href="#Tjänster">Tjänster</a></li>
-							<li><a href="#Tidigare Projekt" class="dropdown-toggle" data-toggle="dropdown">Tidigare Projekt<b class="caret"></b></a>
+							<li ><a href="#Tidigare Projekt" class="dropdown-toggle" data-toggle="dropdown">Tidigare Projekt<b class="caret"></b></a>
 								<b class="caret"></b></a>
 								<ul class="dropdown-menu" role="menu" data-toggle="dropdown">
 									<li onclick="goToOurBuildings()"><a href="#" id="dropdownMenu">Våra byggnader</a></li>
@@ -58,97 +58,90 @@
 
 
 
-		<div id="content">
-			<div id ="startView" class="row">
-				<div class="span12">
+	<div id="content">
+		<div id ="startView" class="row">
+			<div class="span12">
 
-					<h1>Byggföretag med stor erfarenhet inom branschen</h1>
+				<h1>Byggföretag med stor erfarenhet inom branschen</h1>
 
-					<div class="row">
-						<div class="span8">
-							<!-- Carousel -->
-							<div id="myCarousel" class="carousel slide" data-ride="carousel">
-								<!-- Indicators -->
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel" data-slide-to="1"></li>
-									<li data-target="#myCarousel" data-slide-to="2"></li>
-									<li data-target="#myCarousel" data-slide-to="3"></li>
-									<li data-target="#myCarousel" data-slide-to="4"></li>
-									<li data-target="#myCarousel" data-slide-to="5"></li>
-								</ol>
-								<div class="carousel-inner">
-									<div class="item active">
-										<img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h1>Över 6000 kvm nyproducerade ytor</h1>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h1>90 stycken moderna badrum</h1>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h1>38 stycken kök</h1>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h1>Över 3100 kvm totalt renoverade ytor</h1>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h1>37 stycken fristående arkitektritade bostadshus</h1>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h1>Fler än 30 stycken tillbyggnader</h1>
-											</div>
+				<div class="row">
+					<div class="span8">
+						<!-- Carousel -->
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel" data-slide-to="1"></li>
+								<li data-target="#myCarousel" data-slide-to="2"></li>
+								<li data-target="#myCarousel" data-slide-to="3"></li>
+								<li data-target="#myCarousel" data-slide-to="4"></li>
+								<li data-target="#myCarousel" data-slide-to="5"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="item active">
+									<img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="">
+									<div class="container">
+										<div class="carousel-caption">
+											<h1>Över 6000 kvm nyproducerade ytor</h1>
 										</div>
 									</div>
 								</div>
-								<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left">
-									</span>
-								</a>
-								<a class="right carousel-control" href="#myCarousel" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right">
-									</span>
-								</a>
-							</div><!-- /.carousel -->
+								<div class="item">
+									<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="">
+									<div class="container">
+										<div class="carousel-caption">
+											<h1>90 stycken moderna badrum</h1>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="">
+									<div class="container">
+										<div class="carousel-caption">
+											<h1>38 stycken kök</h1>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="">
+									<div class="container">
+										<div class="carousel-caption">
+											<h1>Över 3100 kvm totalt renoverade ytor</h1>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="">
+									<div class="container">
+										<div class="carousel-caption">
+											<h1>37 stycken fristående arkitektritade bostadshus</h1>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="">
+									<div class="container">
+										<div class="carousel-caption">
+											<h1>Fler än 30 stycken tillbyggnader</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left">
+								</span>
+							</a>
+							<a class="right carousel-control" href="#myCarousel" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right">
+								</span>
+							</a>
+						</div><!-- /.carousel -->
 
 
-						</div>
-						<div class="span3">
-							<h4>
-								<p>
-									Vi behärskar de flesta byggtekniker inom små byggområden. Vår flexibilitet och erfarenhet hjälper till att hålla tillkomliga konsumentpriser. Genom att ha långa sammarbeten med våra leverantörer har vi förhandlat väldigt bra rabatter på material som kommer byggherren till godo.
-								</p>
-							</h4>
-						</div>
 					</div>
 				</div>
-				<div class="row">
+			</div>
+			<div class="row">
 				<div class="span12">
 					<h2> Partners </h2>	
 					<div class="row">
@@ -161,48 +154,55 @@
 					</div>
 				</div>
 			</div>
-			</div>
-			<div id ="servicesView" class="row">
-				<div class="span12">
-					<h1>Tjänster</h1>
-				</div>
-			</div>
-			<div id ="aboutView" class="row">
-				<div class="span12">
-					<h1>Om oss</h1>
-				</div>
-			</div>
-			<div id ="contactView" class="row">
-				<div class="span12">
-					<h1>Kontakta oss</h1>
-				</div>
-			</div>
-			<div id ="ourBuildingsView" class="row">
-				<div class="span12">
-					<h1>Våra byggnader</h1>
-				</div>
-			</div>
-			<div id ="reconstructionView" class="row">
-				<div class="span12">
-					<h1>Tillbyggnader</h1>
-				</div>
-			</div>
-			<div id ="bathroomsView" class="row">
-				<div class="span12">
-					<h1>Badrum</h1>
-				</div>
-			</div>
-			<div id ="interioursView" class="row">
-				<div class="span12">
-					<h1>Interiörer</h1>
-				</div>
-			</div>
-			<div id ="fromConstructionView" class="row">
-				<div class="span12">
-					<h1>Från bygget</h1>
-				</div>
+		</div>
+		<div id ="servicesView" class="row">
+			<div class="span12">
+				<h1>MFCorrigo AB är ett byggföretag som erbjuder kompetenser från följande yrkesområden:</h1>
+				<h2 id "moveInFromLeft">-murare</h2>
+				<h2 id "moveInFromLeft">-målare</h2>
+				<h2 id "moveInFromLeft">-elektriker</h2>
+				<h2 id "moveInFromLeft">-snickare</h2>
+				<h2>Vi samarbetar med gräv- och vvsfirmor</h2>
 			</div>
 		</div>
+		<div id ="aboutView" class="row">
+			<div class="span12">
+				<h2>Vi behärskar de flesta byggtekniker inom små byggområden. Vår flexibilitet och erfarenhet hjälper till att hålla tillkomliga konsumentpriser</h2>
+				<h2> Genom att ha långa sammarbeten med våra leverantörer har vi förhandlat väldigt bra rabatter på material som kommer byggherren till godo.</h2>
+			</div>
+		</div>
+		<div id ="contactView" class="row">
+			<div class="span12">
+				<h2>Kontakta oss på mail: mfcorrigo@gmail.com</h2>
+				<h2>eller på telefon: 073 375 76 30</h2>
+			</div>
+		</div>
+		<div id ="ourBuildingsView" class="row">
+			<div class="span12">
+				<h1>Våra byggnader</h1>
+			</div>
+		</div>
+		<div id ="reconstructionView" class="row">
+			<div class="span12">
+				<h1>Tillbyggnader</h1>
+			</div>
+		</div>
+		<div id ="bathroomsView" class="row">
+			<div class="span12">
+				<h1>Badrum</h1>
+			</div>
+		</div>
+		<div id ="interioursView" class="row">
+			<div class="span12">
+				<h1>Interiörer</h1>
+			</div>
+		</div>
+		<div id ="fromConstructionView" class="row">
+			<div class="span12">
+				<h1>Från bygget</h1>
+			</div>
+		</div>
+	</div>
 
 
 
