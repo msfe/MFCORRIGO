@@ -63,12 +63,13 @@ a:hover,a:active
 }
 
 #container{
- margin-right: 10%;
- margin-left: 10%;  
+	margin-right: 10%;
+	margin-left: 10%;  
 }
 
 
-/* NAVBAR */
+/* NAVBAR 
+------------------------------------------------- */
 .navbar.center .navbar-inner {
   text-align: center;
 }
@@ -85,10 +86,7 @@ a:hover,a:active
 }
 
 
-/* CAROUSEL */
-
-
-/* CUSTOMIZE THE CAROUSEL
+/* CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
@@ -98,7 +96,7 @@ a:hover,a:active
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
- z-index: 10;
+ z-index: 0;
 }
 
 /* Declare heights because of positioning of img element */
