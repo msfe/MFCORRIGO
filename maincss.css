@@ -25,7 +25,11 @@ body {
 }
 
 #moveInFromLeft {
-  margin-left: 2%;
+ margin-left: 2%;
+}
+
+.bajs {
+   height: 0px;
 }
 
 li
@@ -35,14 +39,15 @@ li
 
 ul
 {
-	list-style-type:none;
-	margin:0;
-	padding:0;
+   list-style-type:none;
+   margin:0;
+   padding:0;
 }
+
 
 a:link,a:visited {
 	display:block;
-	width:120px;
+	width:150px;
 	font-weight:bold;
 	color:#000000;
 	text-align:center;
@@ -57,24 +62,25 @@ a:hover,a:active
 }
 
 #container{
-  margin-right: 10%;
-  margin-left: 10%;  
+ margin-right: 10%;
+ margin-left: 10%;  
 }
 
 
 /* NAVBAR */
 .navbar.center .navbar-inner {
-    text-align: center;
+  text-align: center;
 }
 
 .navbar.center .navbar-inner .nav {
-    display:inline-block;
-    float: none;
+  display:inline-block;
+  float: none;
+
 }
 
 #navigation ul li:hover ul li a:hover {
-     background: #8FBC8F;
-     color: #ffffff;
+ background: #8FBC8F;
+ color: #ffffff;
 }
 
 
@@ -86,25 +92,25 @@ a:hover,a:active
 
 /* Carousel base class */
 .carousel {
-  height: 500px;
-  margin-bottom: 60px;
+ height: 500px;
+ margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  z-index: 10;
+ z-index: 10;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 500px;
-  background-color: #777;
+ height: 500px;
+ background-color: #777;
 }
 .carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ min-width: 100%;
+ height: 500px;
 }
 
 
@@ -114,22 +120,22 @@ a:hover,a:active
 
 /* Pad the edges of the mobile views a bit */
 .marketing {
-  padding-right: 15px;
-  padding-left: 15px;
+ padding-right: 15px;
+ padding-left: 15px;
 }
 
 /* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
+ margin-bottom: 20px;
+ text-align: center;
 }
 .marketing h2 {
-  font-weight: normal;
-  font-size: 12px;
+ font-weight: normal;
+ font-size: 12px;
 }
 .marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
+ margin-right: 10px;
+ margin-left: 10px;
 }
 
 
@@ -137,14 +143,14 @@ a:hover,a:active
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+ margin: 80px 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
 .featurette-heading {
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
+ font-weight: 300;
+ line-height: 1;
+ letter-spacing: -1px;
 }
 
 
@@ -154,27 +160,27 @@ a:hover,a:active
 
 @media (min-width: 768px) {
 
-  /* Remove the edge padding needed for mobile */
-  .marketing {
-    padding-right: 0;
-    padding-left: 0;
-  }
+ /* Remove the edge padding needed for mobile */
+ .marketing {
+  padding-right: 0;
+  padding-left: 0;
+}
 
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
+/* Bump up size of carousel content */
+.carousel-caption p {
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 1.4;
+}
 
-  .featurette-heading {
-    font-size: 50px;
-  }
+.featurette-heading {
+  font-size: 50px;
+}
 }
 
 @media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
-  }
+ .featurette-heading {
+  margin-top: 120px;
+}
 }
 
