@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="mfcorrigoApp">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,190 +17,47 @@
 	<div class="container">
 		<div class="masthead header">
 			<ul class="nav nav-justified">
-				<li onclick="goToStart()"class="active"><a href="#Start">Start</a></li>
-				<li onclick="goToServices()"><a href="#Tjänster">Tjänster</a></li>
-				<li ><a href="#Tidigare Projekt" class="dropdown-toggle" data-toggle="dropdown">Tidigare Projekt</a>						
+				<li class="active"><a href="#/">Start</a></li>
+				<li><a href="#/services">Tjänster</a></li>
+				<li><a href="#/projects" class="dropdown-toggle" data-toggle="dropdown">Tidigare Projekt</a>						
 					<ul class="dropdown-menu" role="menu" data-toggle="dropdown">
-						<li onclick="goToOurBuildings()"><a href="#" id="dropdownMenu">Våra byggnader</a></li>
-						<li onclick="goToReconstruction()"><a href="#" id="dropdownMenu">Tillbyggnader</a></li>
-						<li onclick="goToBathroom()"><a href="#" id="dropdownMenu">Badrum</a></li>
-						<li onclick="goToInteriours()"><a href="#" id="dropdownMenu">Interiörer</a></li>
-						<li onclick="goToFromConstruction()"><a href="#" id="dropdownMenu">Från bygget</a></li>
+						<li><a href="#" id="dropdownMenu">Våra byggnader</a></li>
+						<li><a href="#" id="dropdownMenu">Tillbyggnader</a></li>
+						<li><a href="#" id="dropdownMenu">Badrum</a></li>
+						<li><a href="#" id="dropdownMenu">Interiörer</a></li>
+						<li><a href="#" id="dropdownMenu">Från bygget</a></li>
 					</ul>
 				</li>
-				<li onclick="goToAbout()"><a href="#Om Oss">Om oss</a></li>
-				<li onclick="goToContact()"><a href="#Kontakt">Kontakta oss</a></li>
+				<li><a href="#/about">Om oss</a></li>
+				<li><a href="#contact">Kontakta oss</a></li>
 			</ul>
 		</div>	
 		<div id="content">
-			<div id ="startView" class="row">
-				<div class="span12">
+			<div ng-view></div>
 
-					<h1>Byggföretag med stor erfarenhet inom branschen</h1>
-
-					<div class="row">
-						<div class="span8">
-							<!-- Carousel -->
-							<div id="myCarousel" class="carousel slide" data-ride="carousel">
-								<!-- Indicators -->
-								<ol class="carousel-indicators">
-									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-									<li data-target="#myCarousel" data-slide-to="1"></li>
-									<li data-target="#myCarousel" data-slide-to="2"></li>
-									<li data-target="#myCarousel" data-slide-to="3"></li>
-									<li data-target="#myCarousel" data-slide-to="4"></li>
-									<li data-target="#myCarousel" data-slide-to="5"></li>
-								</ol>
-								<div class="carousel-inner">
-									<div class="item active">
-										<img src="res/projekt/exbild1.jpg" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h3>Över 6000 kvm nyproducerade ytor</h3>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<img src="res/projekt/exbild2.jpg" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h3>Över 3100 kvm totalt renoverade ytor</h3>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<img src="res/projekt/exbild3.jpg" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h3>90 stycken moderna badrum</h3>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<img src="res/projekt/exbild7.jpg" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h3>38 stycken kök</h3>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<img src="res/projekt/exbild5.jpg" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h3>37 stycken fristående arkitektritade bostadshus</h3>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<img src="res/projekt/exbild6.jpg" alt="">
-										<div class="container">
-											<div class="carousel-caption">
-												<h3>Fler än 30 stycken tillbyggnader</h3>
-											</div>
-										</div>
-									</div>
-								</div>
-								<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-									<span class="glyphicon glyphicon-chevron-left">
-									</span>
-								</a>
-								<a class="right carousel-control" href="#myCarousel" data-slide="next">
-									<span class="glyphicon glyphicon-chevron-right">
-									</span>
-								</a>
-							</div><!-- /.carousel -->
-
-
-						</div>
+			<center>
+				<div id="footer">
+					<div class="footer">
+						<p><h6><span class="copyrigt">&copy; 2013</span>
+							<span class="kontaktinfo">MFcorrigo AB
+								<a href="mailto:mfcorrigo@gmail.com"> mfcorrigo@gmail.com</a>
+								Tel: 073 375 76 30
+							</span>
+						</h6></p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="span12">
-						<h2> Partners </h2>	
-						<div class="row">
-							<div class="span3">		
-								<img src="res/bygg-ole.png" class="img-responsive" alt="Responsive image">
-							</div>
-							<div class="span3">
-								<img src="res/ahlsell.png" class="img-responsive" alt="Responsive image">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id ="servicesView" class="row">
-				<div class="span12">
-					<h1>MFCorrigo AB är ett byggföretag som erbjuder kompetenser från följande yrkesområden:</h1>
-					<h2 id "moveInFromLeft">-murare</h2>
-					<h2 id "moveInFromLeft">-målare</h2>
-					<h2 id "moveInFromLeft">-elektriker</h2>
-					<h2 id "moveInFromLeft">-snickare</h2>
-					<h2>Vi samarbetar med gräv- och vvsfirmor</h2>
-				</div>
-			</div>
-			<div id ="aboutView" class="row">
-				<div class="span12">
-					<h2>Vi behärskar de flesta byggtekniker inom små byggområden. Vår flexibilitet och erfarenhet hjälper till att hålla tillkomliga konsumentpriser</h2>
-					<h2> Genom att ha långa sammarbeten med våra leverantörer har vi förhandlat väldigt bra rabatter på material som kommer byggherren till godo.</h2>
-				</div>
-			</div>
-			<div id ="contactView" class="row">
-				<div class="span12">
-					<h2>Kontakta oss på mail: mfcorrigo@gmail.com</h2>
-					<h2>eller på telefon: 073 375 76 30</h2>
-				</div>
-			</div>
-			<div id ="ourBuildingsView" class="row">
-				<div class="span12">
-					<h1>Våra byggnader</h1>
-				</div>
-			</div>
-			<div id ="reconstructionView" class="row">
-				<div class="span12">
-					<h1>Tillbyggnader</h1>
-				</div>
-			</div>
-			<div id ="bathroomsView" class="row">
-				<div class="span12">
-					<h1>Badrum</h1>
-				</div>
-			</div>
-			<div id ="interioursView" class="row">
-				<div class="span12">
-					<h1>Interiörer</h1>
-				</div>
-			</div>
-			<div id ="fromConstructionView" class="row">
-				<div class="span12">
-					<h1>Från bygget</h1>
-				</div>
-			</div>
+			</center>
+
+			<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+			<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+			<script src="libs/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+			<script src="js/languages.js"></script>
+			<script src="js/languageHandler.js"></script>
+			<script src="libs/angular-1.2.14-dist/angular.min.js"></script>
+			<script src="libs/angular-1.2.14-dist/angular-route.min.js"></script>
+			<script src="libs/angular-1.2.14-dist/angular-animate.min.js"></script>
+			<script src="app.js"></script>
 		</div>
+	</body>
 
-
-
-		<center>
-			<div id="footer">
-				<div class="footer">
-					<p><h6><span class="copyrigt">&copy; 2013</span>
-						<span class="kontaktinfo">MFcorrigo AB
-							<a href="mailto:mfcorrigo@gmail.com"> mfcorrigo@gmail.com</a>
-							Tel: 073 375 76 30
-						</span>
-					</h6></p>
-				</div>
-			</div>
-		</center>
-
-		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<script src="libs/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
-		<script src="js/languages.js"></script>
-		<script src="js/languageHandler.js"></script>
-		<script src="app.js"></script>
-		<script src="libs/angular-1.2.14-dist/angular.min.js"></script>
-	</div>
-</body>
-
-</html>
+	</html>
