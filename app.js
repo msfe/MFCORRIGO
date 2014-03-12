@@ -1,3 +1,47 @@
+var app = angular.module('mfcorrigoApp', ['ngRoute'])
+	.config(function($routeProvider) {
+		$routeProvider
+		.when('#Start', {
+			controller: '',
+			templateUrl:'/app/views/startView.html'
+		})
+		.when('/about', {
+			controller: '',
+			templateUrl:'app/views/aboutView.html'
+		})
+		.when('#services', {
+			controller: '',
+			templateUrl:'app/views/serviceView.html'
+		})
+		.when('/contact', {
+			controller: '',
+			templateUrl:'app/views/contactView.html'
+		})
+		.when('/buildings', {
+			controller: '',
+			templateUrl:'app/views/buildingView.html'
+		})
+		.when('/reconstruction', {
+			controller: '',
+			templateUrl:'app/views/reconstructionView.html'
+		})
+		.when('/interiors', {
+			controller: '',
+			templateUrl:'app/views/interiorView.html'
+		})
+		.when('/constructions', {
+			controller: '',
+			templateUrl:'app/views/constructionView.html'
+		})
+		.when('/bathrooms', {
+			controller: '',
+			templateUrl:'app/views/bathroomView.html'
+		})
+		.otherwise({
+			redirectTo: '#services'
+		});
+	});
+
 $(function() {
 	remove();
 	goToStart();
