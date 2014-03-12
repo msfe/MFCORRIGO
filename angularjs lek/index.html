@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="costumersApp">
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>First AngularJS app</h1>
+	<div ng-view></div>
+
+	<script src="libs/angularjs/angular.js"></script>
+	<script src="libs/angularjs/angular-animate.js"></script>
+	<script src="libs/angularjs/angular-route.js"></script>
+
+	<script>
+		var app = angular.module('costumersApp', ['ngRoute'])
+		app.config(function($routeProvider) {
+			$routeProvider
+			.when('/view1',
+			{
+				controller: 'SimpleController',
+				templateUrl: 'views/view1.html'	
+			})
+			.when('/view2',
+			{
+				controller: 'SimpleController',
+				templateUrl: 'views/view2.html'
+			})
+			.otherwise
+			{
+				redirectTo:'/view1'
+			}
+		})
+		.controller('SimpleController', function($scope) {
+			$scope.costumers = [
+			{"name":"Mattias", "city":"Paris"},
+			{"name":"Martin", "city":"Oslo"},
+			{"name":"Sarah", "city":"Helsinki"},
+			{"name":"Robin", "city":"Stockholm"}
+			];
+
+			$scope.addCostumer = function(){
+				$scope.costumers.push({name: $scope.newCostumer.name, city: $scope.newCostumer.city})
+			}
+		});
+	</script>
+</body>
+</html>
