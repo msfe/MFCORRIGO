@@ -4,38 +4,34 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<link type="text/css" rel="stylesheet" media="screen" href="maincss.css" />
 	<!-- Bootstrap -->
-	<link href="libs/bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet" media="screen">
+	<link href="libs/bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="libs/bootstrap-3.1.1-dist/css/bootstrap-responsive.css" rel="stylesheet">		
 	<title>MFCORRIGO</title>
 </head>
 
 
 <body>
-	<div id="container">
-		<nav class="navbar navbar-default center bajs" role="navigation" >
-			<div class="navbar-inner" id="navigation">
-				<ul class="nav navbar-nav">
-					<li onclick="goToStart()"class="active"><a href="#Start">Start</a></li>
-					<li onclick="goToServices()"><a href="#Tjänster">Tjänster</a></li>
-					<li ><a href="#Tidigare Projekt" class="dropdown-toggle" data-toggle="dropdown">Tidigare Projekt</a>						
-						<ul class="dropdown-menu" role="menu" data-toggle="dropdown">
-							<li onclick="goToOurBuildings()"><a href="#" id="dropdownMenu">Våra byggnader</a></li>
-							<li onclick="goToReconstruction()"><a href="#" id="dropdownMenu">Tillbyggnader</a></li>
-							<li onclick="goToBathroom()"><a href="#" id="dropdownMenu">Badrum</a></li>
-							<li onclick="goToInteriours()"><a href="#" id="dropdownMenu">Interiörer</a></li>
-							<li onclick="goToFromConstruction()"><a href="#" id="dropdownMenu">Från bygget</a></li>
-						</ul>
-					</li>
-					<li onclick="goToAbout()"><a href="#Om Oss">Om oss</a></li>
-					<li onclick="goToContact()"><a href="#Kontakt">Kontakta oss</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</nav>
-
-
-
+	<div class="container">
+		<div class="masthead header">
+			<ul class="nav nav-justified">
+				<li onclick="goToStart()"class="active"><a href="#Start">Start</a></li>
+				<li onclick="goToServices()"><a href="#Tjänster">Tjänster</a></li>
+				<li ><a href="#Tidigare Projekt" class="dropdown-toggle" data-toggle="dropdown">Tidigare Projekt</a>						
+					<ul class="dropdown-menu" role="menu" data-toggle="dropdown">
+						<li onclick="goToOurBuildings()"><a href="#" id="dropdownMenu">Våra byggnader</a></li>
+						<li onclick="goToReconstruction()"><a href="#" id="dropdownMenu">Tillbyggnader</a></li>
+						<li onclick="goToBathroom()"><a href="#" id="dropdownMenu">Badrum</a></li>
+						<li onclick="goToInteriours()"><a href="#" id="dropdownMenu">Interiörer</a></li>
+						<li onclick="goToFromConstruction()"><a href="#" id="dropdownMenu">Från bygget</a></li>
+					</ul>
+				</li>
+				<li onclick="goToAbout()"><a href="#Om Oss">Om oss</a></li>
+				<li onclick="goToContact()"><a href="#Kontakt">Kontakta oss</a></li>
+			</ul>
+		</div>	
 		<div id="content">
 			<div id ="startView" class="row">
 				<div class="span12">
@@ -184,7 +180,7 @@
 
 
 
-		<center>	
+		<center>
 			<div id="footer">
 				<div class="footer">
 					<p><h6><span class="copyrigt">&copy; 2013</span>
@@ -205,7 +201,6 @@
 		<script src="app.js"></script>
 		<script src="libs/angular-1.2.14-dist/angular.min.js"></script>
 	</div>
-
 </body>
 
 </html>
