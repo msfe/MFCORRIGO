@@ -39,23 +39,7 @@ app.config(function($routeProvider) {
 		controller: '',
 		templateUrl:'app/views/projectView.html'
 	})
-	// .when('/reconstruction', {
-	// 	controller: '',
-	// 	templateUrl:'app/views/reconstructionView.html'
-	// })
-	// .when('/interiors', {
-	// 	controller: '',
-	// 	templateUrl:'app/views/interiorView.html'
-	// })
-	// .when('/constructions', {
-	// 	controller: '',
-	// 	templateUrl:'app/views/constructionView.html'
-	// })
-	// .when('/bathrooms', {
-	// 	controller: '',
-	// 	templateUrl:'app/views/bathroomView.html'
-	// })
-.otherwise({
-	redirectTo: '/'
-})
+	.otherwise({
+		redirectTo: '/'
+	})
 });
