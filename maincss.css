@@ -20,8 +20,8 @@
 /* Carousel base class */
 .carousel {
   max-width: 550px;
- max-height: 370px;
- margin-bottom: 60px;
+  max-height: 370px;
+  margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -105,4 +105,19 @@
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+.buildingsPartey {
+  border-top: 5px;
+  border-left: 5px;
+  border-right: 5px;
+  border-bottom: 5px;
+  border: solid;
+}
+
+.buildingPic {
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
 }
