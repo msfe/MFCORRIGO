@@ -23,7 +23,9 @@ var earlierProjectsView = function() { //listOfJsonObjects) {
         imgrefr5:[null],
         about:["Tihi, svensk flagga"]    
     };
-    this.jsonList = [this.json, this.json2];
-    new buildingsView(this.json);
+    var jsonList = [this.json, this.json2];
+    for(var jsonObject in jsonList) {
+        new buildingsView(jsonList[jsonObject]);
+    }
 }
 
