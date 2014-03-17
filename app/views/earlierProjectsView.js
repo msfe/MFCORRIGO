@@ -28,4 +28,3 @@ var earlierProjectsView = function() { //listOfJsonObjects) {
         new buildingsView(jsonList[jsonObject]);
     }
 }
-
