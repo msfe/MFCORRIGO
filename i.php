@@ -31,6 +31,8 @@ mysqli_close($link);
 	<link href="libs/bootstrap-3.1.1-dist/css/bootstrap-responsive.css" rel="stylesheet">		
 	<title>MFCORRIGO</title>
 </head>
+
+
 <body>
 	<div class="container">
 		<div class="masthead header">	

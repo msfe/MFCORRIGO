@@ -22,7 +22,7 @@ function StartViewController($scope) {
     text: 'Över 6000 kvm nyproducerade ytor'
   },
   {
-    image:"res/projekt/exbild.jpg",
+    image:"res/projekt/exbild7.jpg",
     text: 'Fler än 30 stycken tillbyggnader'
   }];
 }

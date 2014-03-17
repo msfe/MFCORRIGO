@@ -21,7 +21,7 @@ app.config(function($routeProvider) {
 	$routeProvider
 	.when('/', {
 		controller: '',
-		templateUrl:'app/views/startTestView.html'
+		templateUrl:'app/views/startView.html'
 	})
 	.when('/about', {
 		controller: '',
