@@ -1,7 +1,7 @@
 <?php
 session_start();
 $link =mysqli_connect("mfcorrigo.se.mysql", "mfcorrigo_se", "ei7Ph6Np", "mfcorrigo_se") or die("Error " . mysqli_error($link));
-mysqli_set_charset($link, "utf8");
+// mysqli_set_charset($link, "utf8");
 $query="SELECT * FROM projects";
 $result=$link->query($query) or trigger_error($mysqli->error." [$query]");
 
@@ -79,5 +79,7 @@ mysqli_close($link);
 	<script src="app/views/earlierProjectsView.js"></script>
 	<script src="app/views/buildingsView.js"></script>
 	<script src="js/model.js"></script>
+	<script src="libs/angular-1.2.14-dist/ui-bootstrap-custom-tpls-0.10.0.js"></script>
+	<script src="app/controllers/startViewController.js"></script>
 </body>
 </html>
