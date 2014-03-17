@@ -16,12 +16,12 @@ $(function(){
     });
 });
 
-var app = angular.module('mfcorrigoApp', ['ngRoute']);
+var app = angular.module('mfcorrigoApp', ['ngRoute', 'ui.bootstrap']);
 app.config(function($routeProvider) {
 	$routeProvider
 	.when('/', {
 		controller: '',
-		templateUrl:'app/views/startView.html'
+		templateUrl:'app/views/startTestView.html'
 	})
 	.when('/about', {
 		controller: '',
@@ -38,8 +38,5 @@ app.config(function($routeProvider) {
 	.when('/projects', {
 		controller: '',
 		templateUrl:'app/views/projectView.html'
-	})
-	.otherwise({
-		redirectTo: '/'
 	})
 });
