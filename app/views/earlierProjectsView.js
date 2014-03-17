@@ -6,3 +6,30 @@ var earlierProjectsView = function(listOfJsonObjects) {
 		div = buildingsView(jsonObject);
 	}
 }
+
+[
+    {
+        "id": "1",
+        "name": "betonghus",
+        "type": "byggnader",
+        "year": null,
+        "imgrefr": "betonghus1",
+        "imgrefr2": "betonghus2",
+        "imgrefr3": null,
+        "imgrefr4": null,
+        "imgrefr5": null,
+        "about": null
+    },
+    {
+        "id": "4",
+        "name": "betonghus2",
+        "type": "byggnader",
+        "year": null,
+        "imgrefr": "betonghus1",
+        "imgrefr2": "betonghus2",
+        "imgrefr3": null,
+        "imgrefr4": null,
+        "imgrefr5": null,
+        "about": null
+    }
+]
