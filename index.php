@@ -53,37 +53,33 @@ mysqli_close($link);
 			</ul>
 		</div>	
 		<div id="content">
-			<div ng-view>
-			</div>
+			<div ng-view></div>
 		</div>
 
 		<center>
 			<div id="footer">
 				<div class="footer">
-					<p>
-						<h6>
-							<span class="copyrigt">&copy; 2013
-							</span>
-							<span class="kontaktinfo">MFcorrigo AB
-								<a href="mailto:mfcorrigo@gmail.com"> mfcorrigo@gmail.com</a>
-								Tel: 073 375 76 30
-							</span>
-						</h6>
-					</p>
+					<p><h6><span class="copyrigt">&copy; 2013</span>
+						<span class="kontaktinfo">MFcorrigo AB
+							<a href="mailto:mfcorrigo@gmail.com"> mfcorrigo@gmail.com</a>
+							Tel: 073 375 76 30
+						</span>
+					</h6></p>
 				</div>
 			</div>
 		</center>
 	</div>
-
 	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
 	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="libs/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 	<script src="libs/angular-1.2.14-dist/angular.min.js"></script>
 	<script src="libs/angular-1.2.14-dist/angular-route.min.js"></script>
 	<script src="libs/angular-1.2.14-dist/angular-animate.min.js"></script>
+	<script src="app.js"></script>
+	<script src="app/views/earlierProjectsView.js"></script>
+	<script src="app/views/buildingsView.js"></script>
+	<script src="js/model.js"></script>
 	<script src="libs/angular-1.2.14-dist/ui-bootstrap-custom-tpls-0.10.0.js"></script>
 	<script src="app/controllers/startViewController.js"></script>
-	<script src="app.js"></script>
 </body>
-
 </html>
