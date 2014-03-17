@@ -102,6 +102,7 @@ $link =mysqli_connect("mfcorrigo.se.mysql", "mfcorrigo_se", "ei7Ph6Np", "mfcorri
 				<script src="libs/angular-1.2.14-dist/angular-route.min.js"></script>
 				<script src="libs/angular-1.2.14-dist/angular-animate.min.js"></script>
 				<script src="app.js"></script>
+				<script src="js/model.js"></script>
 			</div>
 		</body>
 
