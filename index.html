@@ -1,25 +1,3 @@
-<!--<?php
-session_start();
-$link =mysqli_connect("mfcorrigo.se.mysql", "mfcorrigo_se", "ei7Ph6Np", "mfcorrigo_se") or die("Error " . mysqli_error($link));
-// mysqli_set_charset($link, "utf8");
-$query="SELECT * FROM projects";
-$result=$link->query($query) or trigger_error($mysqli->error." [$query]");
-
-// create json from the database
-$rows = array();
-while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
-	$rows[] = $row;
-}
-// builds the model from json
-echo "<script>";
-echo "var buildingsJson = " . json_encode($rows);
-echo "</script>";
-/* free result set */
-$result->free();
-/* close connection */
-mysqli_close($link);
-?>
--->
 <html lang="en" ng-app="mfcorrigoApp">
 <head>
 	<meta charset="utf-8">
@@ -32,6 +10,7 @@ mysqli_close($link);
 	<link href="libs/bootstrap-3.1.1-dist/css/bootstrap-responsive.css" rel="stylesheet">		
 	<title>MFCORRIGO</title>
 </head>
+<div ng-controller="CreateModelCtrl" ng-init="init()"></div>
 <body>
 	<div class="container">
 		<div class="masthead header">	

@@ -63,3 +63,52 @@ app.config(function($routeProvider) {
 		redirectTo: '/'
 	})
 });
+
+function CreateModelCtrl($scope, $http) {
+
+    $scope.init = function() {
+
+		$scope.url = 'php/getDbData.php'; // The url of the php-request
+        $http.post($scope.url, {}) // Create the http post request
+        .success(function(data, status) {
+        	$scope.status = status;
+        	$scope.data = data;
+
+        	for (i=0; i < $scope.data.length; i++){
+        		console.log($scope.data[i].name);
+        	}
+
+        })
+        .error(function(data, status) {
+        	console.log("Failed to connect to DB, faking model");
+        	$scope.data = [
+        {
+        	"id": "1",
+        	"name": "betonghus",
+        	"type": "byggnader",
+        	"year": null,
+        	"imgrefr": "betonghus1",
+        	"imgrefr2": "betonghus2",
+        	"imgrefr3": null,
+        	"imgrefr4": null,
+        	"imgrefr5": null,
+        	"about": "Ett betonghus byggt med prefabricerade sandwich betongelement, sidobyggnad klädd med cortenplåt. Villan var med i TV8 programmet \"Hustoppen\" och fick 23 poäng"
+        },
+        {
+        	"id": "4",
+        	"name": "betonghus2",
+        	"type": "byggnader",
+        	"year": null,
+        	"imgrefr": "betonghus1",
+        	"imgrefr2": "betonghus2",
+        	"imgrefr3": null,
+        	"imgrefr4": null,
+        	"imgrefr5": null,
+        	"about": "Ett betonghus byggt med prefabricerade sandwich betongelement, sidobyggnad klädd med cortenplåt. Villan var med i TV8 programmet \"Hustoppen\" och fick 23 poäng."
+        }
+        ];
+        	$scope.status = status;         
+        });
+
+    };
+}
