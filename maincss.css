@@ -108,7 +108,7 @@
   }
 }
 
-.buildingsPartey {
+/*.buildingsPartey {
   border-top: 5px;
   border-left: 5px;
   border-right: 5px;
@@ -122,11 +122,5 @@
   width: auto;
   height: auto;
 }
+*/
 
-.dropdown-menu li:hover .sub-menu {
-    visibility: visible;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}

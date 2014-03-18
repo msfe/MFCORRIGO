@@ -1,7 +1,5 @@
 //Creates an element with a dishImage and text
-function buildingsView(jsonObject) {
-        var buildingsDiv = document.getElementById("buildingsPart");
-
+function buildingsView(jsonObject, columnNumber) {
         var table = document.createElement("table");
         table.setAttribute('Class', "buildingsPartey")
         var td = document.createElement("td");
@@ -30,5 +28,14 @@ function buildingsView(jsonObject) {
         tr.appendChild(td);
         table.appendChild(tr);
 
+        if(columnNumber == 0) {
+            var buildingsDiv = document.getElementById("columnnr1");
+        }
+        else if(columnNumber == 1) {
+            var buildingsDiv = document.getElementById("columnnr2");
+        }
+        else {//(columnNumber == 2) {
+            var buildingsDiv = document.getElementById("columnnr3");
+        }
         buildingsDiv.appendChild(table);
     }
