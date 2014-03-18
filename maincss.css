@@ -108,19 +108,26 @@
   }
 }
 
-/*.buildingsPartey {
-  border-top: 5px;
-  border-left: 5px;
-  border-right: 5px;
-  border-bottom: 5px;
-  border: solid;
+.buildingsPartey {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #eee;
+  text-align: center;
+  overflow: hidden;
+  border: 2px solid;
+  border-radius: 10px;
 }
 
 .buildingPic {
-  max-width: 150px;
-  max-height: 150px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 300px;
+  max-height: 300px;
   width: auto;
   height: auto;
 }
-*/
 
