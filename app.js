@@ -39,4 +39,24 @@ app.config(function($routeProvider) {
 		controller: '',
 		templateUrl:'app/views/projectView.html'
 	})
+	.when('/reconstruction', {
+		controller: '',
+		templateUrl:'app/views/projectView.html'
+	})
+	.when('/bathroom', {
+		controller: '',
+		templateUrl:'app/views/projectView.html'
+	})
+	.when('/interiours', {
+		controller: '',
+		templateUrl:'app/views/projectView.html'
+	})
+	.when('/fromConstruction', {
+		controller: '',
+		templateUrl:'app/views/projectView.html'
+	})
+	.when('/allProjects', {
+		controller: '',
+		templateUrl:'app/views/projectView.html'
+	})
 });
