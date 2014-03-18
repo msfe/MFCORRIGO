@@ -35,7 +35,7 @@ app.config(function($routeProvider) {
 		controller: '',
 		templateUrl:'app/views/contactView.html'
 	})	
-	.when('/projects', {
+	.when('/buildings', {
 		controller: '',
 		templateUrl:'app/views/projectView.html'
 	})
