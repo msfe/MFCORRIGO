@@ -47,7 +47,7 @@ mysqli_close($link);
 					</ul>
 				</li>
 				<li><a href="#/about">Om oss</a></li>
-				<li><a href="#contact">Kontakta oss</a></li>
+				<li><a href="#/contact">Kontakta oss</a></li>
 			</ul>
 		</div>	
 		<div id="content">

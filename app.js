@@ -39,4 +39,7 @@ app.config(function($routeProvider) {
 		controller: '',
 		templateUrl:'app/views/projectView.html'
 	})
+	.otherwise({
+		redirectTo: '/'
+	})
 });
