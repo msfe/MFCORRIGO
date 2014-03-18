@@ -6,11 +6,14 @@ function buildingsView(jsonObject, columnNumber) {
         var tr = document.createElement("tr");
 
         //Add first image of building
+        var div = document.createElement("div");
+        div.setAttribute('Class', "imageWrapper");
         var img = document.createElement('img');
         img.setAttribute('src', jsonObject.imgrefr);
         img.setAttribute('Class', "buildingPic");
         //img.onclick = func;
-        td.appendChild(img);
+        div.appendChild(img);
+        td.appendChild(div);
         tr.appendChild(td);
         table.appendChild(tr);
 
