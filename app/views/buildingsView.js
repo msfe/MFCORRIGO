@@ -24,8 +24,8 @@ function buildingsView(project, columnNumber) {
     td.appendChild(document.createTextNode(project.name));
     tr.appendChild(td);
     table.appendChild(tr);
-    table.setAttribute('onclick', "function() { createPopUp('project'); }");
-    //table.setAttribute('onclick', "createPopUp(project)");
+    //table.setAttribute('onclick', "function() { createPopUp('project'); }");
+    table.setAttribute('onclick', "createPopUp('" + project + "')");
 
 
     if(columnNumber == 0) {
@@ -42,5 +42,5 @@ function buildingsView(project, columnNumber) {
 }
 
 function createPopUp(project) {
-    alert(project);
+    alert(project.name);
 }
