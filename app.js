@@ -216,7 +216,7 @@ app.controller('LoadModel', function ($scope, $http, $rootScope) {
    }
  });
 
-var filterController = function ($scope, $modal, $log) {
+var filterController = function ($scope, $rootScope, $modal, $log) {
 
   $scope.open = function (chosenProject) {
 
@@ -235,6 +235,10 @@ var filterController = function ($scope, $modal, $log) {
     }, function () {
       $log.info('Modal dismissed at: ' + new Date());
     });
+  };
+
+  $scope.ChangeType= function(type){
+    $rootScope.type = type;
   };
 };
 
