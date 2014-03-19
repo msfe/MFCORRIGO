@@ -3,7 +3,8 @@
 		<h3>I am modal!</h3>
 	</div>
 	<div class="modal-body">
-		<carousel interval="myInterval">
+		
+		<carousel interval="myInterval" class="carousel modal-carousel">
 			<slide ng-repeat="image in project.images" active="slide.active">
 				<img ng-src="res/projekt/{{image}}" style="margin:auto;">
 				<div class="carousel-caption">
@@ -11,6 +12,7 @@
 				</div>
 			</slide>
 		</carousel>
+		
 
 	</div>
 	<div class="modal-footer">

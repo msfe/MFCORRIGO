@@ -4,8 +4,8 @@
 		<h1>Byggföretag med stor erfarenhet inom branschen</h1>
 
 		<div class="row">
-			<div class="span8">
-				<div ng-controller="StartViewController">
+			<div ng-controller="StartViewController">
+				<div class="col-md-6">
 					<div style="height: 305px">
 						<carousel interval="myInterval">
 							<slide ng-repeat="slide in slides" active="slide.active">
@@ -16,12 +16,10 @@
 							</slide>
 						</carousel>
 					</div>
-					<div class="row">
-						<div class="col-md-6">
-							Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-							<br />Enter a negative number to stop the interval.
-						</div>
-					</div>
+				</div>
+				<div class="col-md-6">
+					Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
+					<br />Enter a negative number to stop the interval.
 				</div>
 			</div>
 		</div>
