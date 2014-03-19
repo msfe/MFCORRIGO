@@ -1,52 +1,29 @@
 <div class="row">
 	<div class="span12">
 		<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-
-        <div>
-            <script type="text/ng-template" id="myModalContent.html">
-                <div class="modal-header">
-                    <h3>I am modal!</h3>
-                </div>
-                <div class="modal-body">
-                    <ul>
-                        <li ng-repeat="item in items">
-                            <a ng-click="selected.item = item">{{ item }}</a>
-                        </li>
-                    </ul>
-                    Selected: <b>{{ selected.item }}</b>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" ng-click="ok()">OK</button>
-                    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-                </div>
-            </script>
-        </div>
-
         <div class="row">
-            <div ng-repeat="project in data">
-                <table class="buildingsPartey" ng-click="open()">
-                    <tr>
-                        <td>
-                            <div class="imageWrapper">
-                                <img src="res/projekt/{{project.imgrefr}}" class="buildingPic">
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>
-                                {{project.name}}
-                            </p>
-                        </td>
-                    </tr>
-                </table>
+            <div ng-repeat="(index, project) in data | filter:type">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <table class="buildingsPartey" ng-click="open()" onmouseover="this.style.background='#ddd'" onmouseout="this.style.background='#eee'">
+                        <tr>
+                            <td>
+                                <div class="imageWrapper">
+                                    <img ng-src="res/projekt/{{project.imgrefr}}" class="buildingPic">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    {{project.name}}
+                                    <br>
+                                    {{index}}
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
-
-        <div class="row">
-           <div class="col-xs-12 col-sm-6 col-md-4" id = "columnnr1"></div>
-           <div class="col-xs-12 col-sm-6 col-md-4" id = "columnnr2"></div>
-           <div class="col-xs-12 col-sm-6 col-md-4" id = "columnnr3"></div>
-       </div>
-   </div>
+    </div>
 </div>

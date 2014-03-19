@@ -38,47 +38,32 @@ app.config(function($routeProvider) {
 		templateUrl:'app/views/contactView.html'
 	})	
 	.when('/buildings', {
-		controller: 'ModalDemoCtrl',
+		controller: 'filterController',
 		templateUrl:'app/views/projectView.html'
 	})
 	.when('/reconstruction', {
-		controller: 'ModalDemoCtrl',
+		controller: 'filterController',
 		templateUrl:'app/views/projectView.html'
 	})
 	.when('/bathroom', {
-		controller: 'ModalDemoCtrl',
+		controller: 'filterController',
 		templateUrl:'app/views/projectView.html'
 	})
 	.when('/interiours', {
-		controller: 'ModalDemoCtrl',
+		controller: 'filterController',
 		templateUrl:'app/views/projectView.html'
 	})
 	.when('/fromConstruction', {
-		controller: 'ModalDemoCtrl',
+		controller: 'filterController',
 		templateUrl:'app/views/projectView.html'
 	})
 	.when('/allProjects', {
-		controller: 'ModalDemoCtrl',
+		controller: 'filterController',
 		templateUrl:'app/views/projectView.html'
 	})
 	.otherwise({
 		redirectTo: '/'
 	})
-});
-
-app.controller('filterController', function ($scope, $rootScope){
-  var counter = 0;
-  for(var projectId in $rootScope.data) {
-    if($scope.type === $rootScope.data[projectId].type || $scope.type === 'all'){
-      new buildingsView($rootScope.data[projectId], counter%3);
-      counter++;
-    }
-  }
-
-  $scope.ChangeType = function(type){
-    $rootScope.type = type;
-  };
-
 });
 
 app.controller('LoadModel', function ($scope, $http, $rootScope) {
@@ -206,7 +191,7 @@ app.controller('LoadModel', function ($scope, $http, $rootScope) {
    }
  });
 
-var ModalDemoCtrl = function ($scope, $modal, $log) {
+var filterController = function ($scope, $modal, $log) {
 
   $scope.items = ['item1', 'item2', 'item3'];
 
@@ -233,7 +218,7 @@ var ModalDemoCtrl = function ($scope, $modal, $log) {
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-var ModalInstanceCtrl = function ($scope, $modalInstance, $rootScope, items) {
+var ModalInstanceCtrl = function ($scope, $modalInstance, $rootScope,items) {
 
   $scope.items = items;
   $scope.selected = {
