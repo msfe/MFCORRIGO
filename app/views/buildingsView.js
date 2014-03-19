@@ -1,5 +1,5 @@
 //Creates an element with a dishImage and text
-function buildingsView(jsonObject, columnNumber) {
+function buildingsView(project, columnNumber) {
         var table = document.createElement("table");
         table.setAttribute('Class', "buildingsPartey")
         var td = document.createElement("td");
@@ -9,7 +9,7 @@ function buildingsView(jsonObject, columnNumber) {
         var div = document.createElement("div");
         div.setAttribute('Class', "imageWrapper");
         var img = document.createElement('img');
-        img.setAttribute('src', jsonObject.imgrefr);
+        img.setAttribute('src', 'res/projekt/' + project.imgrefr);
         img.setAttribute('Class', "buildingPic");
         //img.onclick = func;
         div.appendChild(img);
@@ -20,16 +20,10 @@ function buildingsView(jsonObject, columnNumber) {
         //Add name of building
         var td = document.createElement("td");
         var tr = document.createElement("tr");
-        td.appendChild(document.createTextNode(jsonObject.name));
+        td.appendChild(document.createTextNode(project.name));
         tr.appendChild(td);
         table.appendChild(tr);
 
-		//Add description of building
-		var td = document.createElement("td");
-        var tr = document.createElement("tr");
-        td.appendChild(document.createTextNode(jsonObject.about));
-        tr.appendChild(td);
-        table.appendChild(tr);
 
         if(columnNumber == 0) {
             var buildingsDiv = document.getElementById("columnnr1");
