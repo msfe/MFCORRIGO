@@ -1,7 +1,15 @@
-<div class="slider" ng-controller="projectModalController">
-
-	<img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
-
-	<a class="arrow prev" ng-click="showPrev()"></a>
-	<a class="arrow next" ng-click="shownNext()"></a>
-</div>
+ <div class="modal-header">
+ 	<h3>I'm a modal!</h3>
+ </div>
+ <div class="modal-body">
+ 	<ul>
+ 		<li ng-repeat="item in items">
+ 			<a ng-click="selected.item = item">{{ item }}</a>
+ 		</li>
+ 	</ul>
+ 	Selected: <b>{{ selected.item }}</b>
+ </div>
+ <div class="modal-footer">
+ 	<button class="btn btn-primary" ng-click="ok()">OK</button>
+ 	<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+ </div>

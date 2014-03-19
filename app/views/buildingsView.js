@@ -29,8 +29,8 @@ function buildingsView(project, columnNumber) {
     //the method that will be called on click will need alot of info from the project-object
     //but as the object is fucking with us and not lets us pass it as a parameter,
     //we have to send all "fields" of the object as parameters instead (which for some reason works!!?!?!?)
-    table.setAttribute('onclick', "createPopUp('" + project.name + "', '" + project.about + "', '" + project.imgrefr + "', '" + project.imgrefr2 + "', '" + project.imgrefr3 + "', '" + project.imgrefr4 + "', '" + project.imgrefr5 + "', '" + project.type + "', '" + project.id + "');");
-
+    // table.setAttribute('onclick', "createPopUp('" + project.name + "', '" + project.about + "', '" + project.imgrefr + "', '" + project.imgrefr2 + "', '" + project.imgrefr3 + "', '" + project.imgrefr4 + "', '" + project.imgrefr5 + "', '" + project.type + "', '" + project.id + "');");
+    table.setAttribute('ng-click', "open()");
 
     if(columnNumber == 0) {
         var buildingsDiv = document.getElementById("columnnr1");

@@ -38,27 +38,27 @@ app.config(function($routeProvider) {
 		templateUrl:'app/views/contactView.html'
 	})	
 	.when('/buildings', {
-		controller: 'filterController',
+		controller: 'ModalDemoCtrl',
 		templateUrl:'app/views/projectView.html'
 	})
 	.when('/reconstruction', {
-		controller: 'filterController',
+		controller: 'ModalDemoCtrl',
 		templateUrl:'app/views/projectView.html'
 	})
 	.when('/bathroom', {
-		controller: 'filterController',
+		controller: 'ModalDemoCtrl',
 		templateUrl:'app/views/projectView.html'
 	})
 	.when('/interiours', {
-		controller: 'filterController',
+		controller: 'ModalDemoCtrl',
 		templateUrl:'app/views/projectView.html'
 	})
 	.when('/fromConstruction', {
-		controller: 'filterController',
+		controller: 'ModalDemoCtrl',
 		templateUrl:'app/views/projectView.html'
 	})
 	.when('/allProjects', {
-		controller: 'filterController',
+		controller: 'ModalDemoCtrl',
 		templateUrl:'app/views/projectView.html'
 	})
 	.otherwise({
@@ -205,3 +205,51 @@ app.controller('LoadModel', function ($scope, $http, $rootScope) {
      return data;
    }
  });
+
+var ModalDemoCtrl = function ($scope, $modal, $log) {
+
+  $scope.items = ['item1', 'item2', 'item3'];
+
+  $scope.open = function () {
+
+    var modalInstance = $modal.open({
+      templateUrl: 'app/views/projectModalView.html',
+      controller: ModalInstanceCtrl,
+      resolve: {
+        items: function () {
+          return $scope.items;
+        }
+      }
+    });
+
+    modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
+    });
+  };
+};
+
+// Please note that $modalInstance represents a modal window (instance) dependency.
+// It is not the same as the $modal service used above.
+
+var ModalInstanceCtrl = function ($scope, $modalInstance, $rootScope, items) {
+
+  $scope.items = items;
+  $scope.selected = {
+    item: $scope.items[0]
+  };
+
+  $scope.ok = function () {
+    $modalInstance.close($scope.selected.item);
+  };
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+
+  $scope.ChangeType = function(type){
+    $rootScope.type = type;
+  };
+
+};
