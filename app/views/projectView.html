@@ -4,7 +4,7 @@
         <div class="row">
             <div ng-repeat="(index, project) in data | filter:type">
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <table class="buildingsPartey" ng-click="open()" onmouseover="this.style.background='#ddd'" onmouseout="this.style.background='#eee'">
+                    <table class="buildingsPartey" ng-click="open(project)" onmouseover="this.style.background='#ddd'" onmouseout="this.style.background='#eee'">
                         <tr>
                             <td>
                                 <div class="imageWrapper">

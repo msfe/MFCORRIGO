@@ -79,13 +79,38 @@ app.controller('LoadModel', function ($scope, $http, $rootScope) {
         console.log("Failed to connect to DB, faking model");
         $rootScope.data = fakeModel();
       }
+      makeImageList();
     })
     .error(function(data, status) {
      console.log("No PHP-service found, faking model");
      $rootScope.data = fakeModel();
      $scope.status = status;         
+     makeImageList();
    });
 
+    
+    function makeImageList(){
+      for(project in $rootScope.data){
+        var images = [];
+        if($rootScope.data[project].imgrefr != null){
+          images.push($rootScope.data[project].imgrefr);
+        }
+        if($rootScope.data[project].imgrefr2 != null){
+          images.push($rootScope.data[project].imgrefr2);
+        }  
+        if($rootScope.data[project].imgrefr3 != null){
+          images.push($rootScope.data[project].imgrefr3);
+        }  
+        if($rootScope.data[project].imgrefr4 != null){
+          images.push($rootScope.data[project].imgrefr4);
+        }  
+        if($rootScope.data[project].imgrefr5 != null){
+          images.push($rootScope.data[project].imgrefr5);
+        }
+        $rootScope.data[project].images = images;    
+      }
+    }
+    
 
     function fakeModel() {
       var data = [
@@ -193,16 +218,14 @@ app.controller('LoadModel', function ($scope, $http, $rootScope) {
 
 var filterController = function ($scope, $modal, $log) {
 
-  $scope.items = ['item1', 'item2', 'item3'];
-
-  $scope.open = function () {
+  $scope.open = function (chosenProject) {
 
     var modalInstance = $modal.open({
       templateUrl: 'app/views/projectModalView.html',
-      controller: ModalInstanceCtrl,
+      controller: ModalInstanceController,
       resolve: {
-        items: function () {
-          return $scope.items;
+        project: function(){
+          return chosenProject;
         }
       }
     });
@@ -218,12 +241,10 @@ var filterController = function ($scope, $modal, $log) {
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-var ModalInstanceCtrl = function ($scope, $modalInstance, $rootScope,items) {
+var ModalInstanceController = function ($scope, $modalInstance, $rootScope, project) {
 
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
+  $scope.project = project;
+  $scope.myInterval = 5000;
 
   $scope.ok = function () {
     $modalInstance.close($scope.selected.item);

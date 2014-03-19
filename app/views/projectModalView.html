@@ -1,18 +1,21 @@
-<div ng-controller="filterController">
-    <div class="modal-header">
-        <h3>I am modal!</h3>
-    </div>
-    <div class="modal-body">
-        <ul>
-            <li ng-repeat="item in items">
-                <a ng-click="selected.item = item">{{ item }}</a>
-            </li>
-        </ul>
-        Selected: <b>{{ selected.item }}</b>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" ng-click="ok()">OK</button>
-        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-    </div>
+<div>
+	<div class="modal-header">
+		<h3>I am modal!</h3>
+	</div>
+	<div class="modal-body">
+		<carousel interval="myInterval">
+			<slide ng-repeat="image in project.images" active="slide.active">
+				<img ng-src="res/projekt/{{image}}" style="margin:auto;">
+				<div class="carousel-caption">
+					<h3>{{slide.text}}</h3>
+				</div>
+			</slide>
+		</carousel>
+
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-primary" ng-click="ok()">OK</button>
+		<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+	</div>
 
 </div>
