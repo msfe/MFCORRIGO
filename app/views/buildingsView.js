@@ -24,8 +24,12 @@ function buildingsView(project, columnNumber) {
     td.appendChild(document.createTextNode(project.name));
     tr.appendChild(td);
     table.appendChild(tr);
-    //table.setAttribute('onclick', "function() { createPopUp('project'); }");
-    table.setAttribute('onclick', "createPopUp('" + project + "')");
+    
+    //To create popup, we need to set an onclicklistener on the table holding the buildingView
+    //the method that will be called on click will need alot of info from the project-object
+    //but as the object is fucking with us and not lets us pass it as a parameter,
+    //we have to send all "fields" of the object as parameters instead (which for some reason works!!?!?!?)
+    table.setAttribute('onclick', "createPopUp('" + project.name + "', '" + project.about + "', '" + project.imgrefr + "', '" + project.imgrefr2 + "', '" + project.imgrefr3 + "', '" + project.imgrefr4 + "', '" + project.imgrefr5 + "', '" + project.type + "', '" + project.id + "');");
 
 
     if(columnNumber == 0) {
@@ -41,6 +45,5 @@ function buildingsView(project, columnNumber) {
     buildingsDiv.appendChild(table);
 }
 
-function createPopUp(project) {
-    alert(project.name);
+function createPopUp(name, about, img1, img2, img3, img4, img5, type, id) {
 }
