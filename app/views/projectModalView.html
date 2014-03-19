@@ -1,21 +1,24 @@
 <div>
 	<div class="modal-header">
-		<h3>I am modal!</h3>
+		<h3 class="modalHeader">{{project.name}}</h3>
 	</div>
 	<div class="modal-body">
+		<!-- <div class="col-xs-12 col-md-6"> -->
 		<carousel interval="myInterval">
 			<slide ng-repeat="image in project.images" active="slide.active">
 				<img ng-src="res/projekt/{{image}}" style="margin:auto;">
-				<div class="carousel-caption">
-					<h3>{{slide.text}}</h3>
-				</div>
 			</slide>
 		</carousel>
-
+		<div>
+			{{project.about}}
+		</div>
+		<!-- </div> -->
 	</div>
 	<div class="modal-footer">
-		<button class="btn btn-primary" ng-click="ok()">OK</button>
-		<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+		<img class = "modalfooterImage" ng-src="res/projekt/{{project.images[0]}}"/>
+		<p class = "modalFooterText"> Drag to favorites -> -> -></p>
+		<img class = "modalFooterFavorites" ng-src = "res/projekt/star.jpg"/>
+		<button class="btn btn-warning" ng-click="close()">Close</button>
 	</div>
 
 </div>

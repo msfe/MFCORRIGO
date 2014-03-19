@@ -246,12 +246,9 @@ var ModalInstanceController = function ($scope, $modalInstance, $rootScope, proj
   $scope.project = project;
   $scope.myInterval = 5000;
 
-  $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
-  };
 
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
+  $scope.close = function () {
+    $modalInstance.dismiss('close');
   };
 
   $scope.ChangeType = function(type){
