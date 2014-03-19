@@ -31,6 +31,8 @@ function buildingsView(project, columnNumber) {
     //we have to send all "fields" of the object as parameters instead (which for some reason works!!?!?!?)
     table.setAttribute('onclick', "createPopUp('" + project.name + "', '" + project.about + "', '" + project.imgrefr + "', '" + project.imgrefr2 + "', '" + project.imgrefr3 + "', '" + project.imgrefr4 + "', '" + project.imgrefr5 + "', '" + project.type + "', '" + project.id + "');");
 
+     table.setAttribute('onmouseover', "this.style.background='#ddd';");
+     table.setAttribute('onmouseout', "this.style.background='#eee';");
 
     if(columnNumber == 0) {
         var buildingsDiv = document.getElementById("columnnr1");
