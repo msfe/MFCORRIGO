@@ -17,13 +17,13 @@
 				<li class="active"><a href="#/">Start</a></li>
 				<li><a href="#/services">Tjänster</a></li>
 				<li><a href="#/projects" class="dropdown-toggle" data-toggle="dropdown">Tidigare Projekt</a>						
-					<ul class="dropdown-menu" role="menu" data-toggle="dropdown">
-						<li><a href="#/allProjects"  id="dropdownMenu">Alla projekt</a></li>
-						<li><a href="#/buildings" id="dropdownMenu">Våra byggnader</a></li>
-						<li><a href="#/reconstruction" id="dropdownMenu">Tillbyggnader</a></li>
-						<li><a href="#/bathroom" id="dropdownMenu">Badrum</a></li>
-						<li><a href="#/interiours" id="dropdownMenu">Interiörer</a></li>
-						<li><a href="#/fromConstruction" id="dropdownMenu">Från bygget</a></li>
+					<ul class="dropdown-menu" role="menu" data-toggle="dropdown" ng-controller="filterController">
+						<li><a href="#/allProjects"  id="dropdownMenu" ng-click="ChangeType('all')">Alla projekt</a></li>
+						<li><a href="#/buildings" id="dropdownMenu" ng-click="ChangeType('buildings')">Våra byggnader</a></li>
+						<li><a href="#/reconstruction" id="dropdownMenu" ng-click="ChangeType('reconstruction')">Tillbyggnader</a></li>
+						<li><a href="#/bathroom" id="dropdownMenu" ng-click="ChangeType('bathroom')">Badrum</a></li>
+						<li><a href="#/interiours" id="dropdownMenu" ng-click="ChangeType('interiours')">Interiörer</a></li>
+						<li><a href="#/fromConstruction" id="dropdownMenu" ng-click="ChangeType('fromConstruction')">Från bygget</a></li>
 					</ul>
 				</li>
 				<li><a href="#/about">Om oss</a></li>
