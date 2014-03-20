@@ -22,7 +22,7 @@
                     </table>
                 </div>
             </div>
-            <div ng-repeat="(index, project) in Model.getAll" ngif="type=='favorites'">
+            <div ng-repeat="(index, project) in favorites" ng-if="favoriteChosen()">
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <table class="buildingsPartey" ng-click="open(project)" onmouseover="this.style.background='#ddd'" onmouseout="this.style.background='#eee'">
                         <tr>

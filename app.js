@@ -78,8 +78,8 @@ app.factory('Model', function() {
       console.log("Not null indata was null, exiting");
       return;
     }
-    var projectObj = new Project(project);
-    favorites.push(projectObj);
+    // var projectObj = new Project(project);
+    favorites.push(project);
     return project;
   };
   Model.removeProject = function (project) {
@@ -100,7 +100,7 @@ app.factory('Model', function() {
     var index = -1;
     for(var i = 0; i<favorites.length; i++){
       var curr = favorites[i];
-      if(curr.getId() == project.id){
+      if(curr.id == project.id){
         index = i;
         break;
       }
@@ -260,6 +260,18 @@ app.controller('LoadModel', function ($scope, $http, $rootScope) {
  });
 
 function filterController($scope, $rootScope, $modal, $log, Model) {
+
+  $scope.getFavorites = function(){
+    return Model.getAll();
+  }
+
+  $scope.favorites = Model.getAll();
+
+  $scope.chosen = $rootScope.type == 'favorites';
+
+  $scope.favoriteChosen = function(){
+    return $rootScope.type == 'favorites';
+  }
 
   $scope.open = function (chosenProject) {
 
