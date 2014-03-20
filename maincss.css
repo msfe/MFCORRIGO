@@ -49,29 +49,58 @@
 
 /* CAROUSEL
 -------------------------------------------------- */
+.carousel-container {
+    
+  }
+  .carousel {    
+    margin-bottom: 60px;
+    float:left;
+    /*overflow: hidden;*/
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+   z-index: 0;
+ }
+
+ /* Declare heights because of positioning of img element */
+ .carousel .item {
+   height: 100%;
+   background-color: rgba(0,0,0,1);
+   width: auto;
+ }
+ .carousel-inner > .item > img {
+   height: 100%;
+   width: auto;
+ }
 
 /* Carousel base class */
-.carousel {
-  width: 550px;
-  height: 370px;
-  margin-bottom: 60px;
-  float:left;
-  overflow: hidden;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
- z-index: 0;
-}
+@media (min-width: 768px) {
+  .carousel-container {
+    height: 305px;
+  }
+  .carousel {
+    width: 550px;
+    height: 370px;
+    margin-bottom: 60px;
+    float:left;
+    overflow: hidden;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+   z-index: 0;
+ }
 
-/* Declare heights because of positioning of img element */
-.carousel .item {
- height: 370px;
- background-color: rgba(0,0,0,1);
- width: auto;
-}
-.carousel-inner > .item > img {
- height: 370px;
- width: 100%;
+ /* Declare heights because of positioning of img element */
+ .carousel .item {
+   height: inherit;
+   background-color: rgba(0,0,0,1);
+   width: inherit;
+   overflow: hidden;
+ }
+ .carousel-inner > .item > img {
+   height: 100%;
+   width: inherit;
+ }
 }
 
 #moreLeeeft {
