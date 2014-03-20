@@ -34,30 +34,30 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 
 
-		<h1>nav with nav-tabs AND nav-justified</h1>	
-
-		<ul class="nav nav-tabs nav-justified">
-			<li class="active"><a href="#">Start</a></li>
-			<li><a href="#/services">Tjänster</a></li>
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="#/projects">
-					Tidigare Projekt <span class="caret"></span>
-				</a>
-				<ul class="dropdown-menu" role="menu" ng-controller="filterController">
-					<li><a href="#/allProjects" ng-click="ChangeType('')">Alla projekt</a></li>
-					<li class="divider"></li>
-					<li><a href="#/buildings" ng-click="ChangeType('buildings')">Våra byggnader</a></li>
-					<li><a href="#/reconstruction" ng-click="ChangeType('reconstruction')">Tillbyggnader</a></li>
-					<li><a href="#/bathroom" ng-click="ChangeType('bathroom')">Badrum</a></li>
-					<li><a href="#/interiours" ng-click="ChangeType('interiours')">Interiörer</a></li>
-					<li><a href="#/fromConstruction" ng-click="ChangeType(''fromConstruction)">Från bygget</a></li>
-				</ul>
-			</li>
-			<li><a href="#/about">Om oss</a></li>
-			<li><a href="#/contact">Kontakta oss</a></li>
-		</ul>
-		<div id="content">
-			<div ng-view></div>
+		<div class="masthead header">	
+			<ul class="nav nav-justified">
+				<li class="active"><a href="#">Start</a></li>
+				<li><a href="#/services">Tjänster</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#/projects">
+						Tidigare Projekt <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" role="menu" ng-controller="filterController">
+						<li><a href="#/allProjects" ng-click="ChangeType('')">Alla projekt</a></li>
+						<li class="divider"></li>
+						<li><a href="#/buildings" ng-click="ChangeType('buildings')">Våra byggnader</a></li>
+						<li><a href="#/reconstruction" ng-click="ChangeType('reconstruction')">Tillbyggnader</a></li>
+						<li><a href="#/bathroom" ng-click="ChangeType('bathroom')">Badrum</a></li>
+						<li><a href="#/interiours" ng-click="ChangeType('interiours')">Interiörer</a></li>
+						<li><a href="#/fromConstruction" ng-click="ChangeType(''fromConstruction)">Från bygget</a></li>
+					</ul>
+				</li>
+				<li><a href="#/about">Om oss</a></li>
+				<li><a href="#/contact">Kontakta oss</a></li>
+			</ul>
+			<div id="content">
+				<div ng-view></div>
+			</div>
 		</div>
 
 		<center>
