@@ -10,29 +10,9 @@
 	<link href="libs/bootstrap-3.1.1-dist/css/bootstrap-responsive.css" rel="stylesheet">		
 	<title>MFCORRIGO</title>
 </head>
-<div ng-controller="LoadModel">
-	<body>
-		<div class="container">
-<!-- 		<div class="masthead header">	
-			<ul class="nav nav-justified">
-				<li class="active"><a href="#/">Start</a></li>
-				<li><a href="#/services">Tjänster</a></li>
-				<li class="dropdown"><a href="#/projects" class="dropdown-toggle" data-toggle="dropdown">Tidigare Projekt</a>						
-					<ul class="dropdown-menu" role="menu" ng-controller="filterController">
-						<li><a href="#/allProjects"  id="dropdownMenu" ng-click="ChangeType('')">Alla projekt</a></li>
-						<li><a href="#/buildings" id="dropdownMenu" ng-click="ChangeType('buildings')">Våra byggnader</a></li>
-						<li><a href="#/reconstruction" id="dropdownMenu" ng-click="ChangeType('reconstruction')">Tillbyggnader</a></li>
-						<li><a href="#/bathroom" id="dropdownMenu" ng-click="ChangeType('bathroom')">Badrum</a></li>
-						<li><a href="#/interiours" id="dropdownMenu" ng-click="ChangeType('interiours')">Interiörer</a></li>
-						<li><a href="#/fromConstruction" id="dropdownMenu" ng-click="ChangeType('fromConstruction')">Från bygget</a></li>
-					</ul>
-				</li>
-				<li><a href="#/about">Om oss</a></li>
-				<li><a href="#/contact">Kontakta oss</a></li>
-			</ul>
-		</div>	 -->
-		<!-- Collect the nav links, forms, and other content for toggling -->
-
+<div ng-controller="LoadModel"></div>
+<body>
+	<div class="container">
 
 		<div class="masthead header">	
 			<ul class="nav nav-justified">
@@ -49,7 +29,7 @@
 						<li><a href="#/reconstruction" ng-click="ChangeType('reconstruction')">Tillbyggnader</a></li>
 						<li><a href="#/bathroom" ng-click="ChangeType('bathroom')">Badrum</a></li>
 						<li><a href="#/interiours" ng-click="ChangeType('interiours')">Interiörer</a></li>
-						<li><a href="#/fromConstruction" ng-click="ChangeType(''fromConstruction)">Från bygget</a></li>
+						<li><a href="#/fromConstruction" ng-click="ChangeType('fromConstruction')">Från bygget</a></li>
 					</ul>
 				</li>
 				<li><a href="#/about">Om oss</a></li>
@@ -83,5 +63,8 @@
 	<script src="app.js"></script>
 	<script src="libs/angular-1.2.14-dist/ui-bootstrap-tpls-0.10.0.js"></script>
 	<script src="app/controllers/startViewController.js"></script>
+	<script src="libs/angular-1.2.14-dist/angular-dragdrop.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	<script src="js/model.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@ $(function(){
       });
 });
 
-var app = angular.module('mfcorrigoApp', ['ngRoute', 'ui.bootstrap']);
+var app = angular.module('mfcorrigoApp', ['ngRoute', 'ui.bootstrap', 'ngDragDrop']);
 
 
 app.config(function($routeProvider) {
@@ -66,9 +66,48 @@ app.config(function($routeProvider) {
 	})
 });
 
+app.factory('Model', function() {
+  var Model = {};
+  var favorites = [];
+  Model.addProject = function (project) {
+    if(!project.id || !project.name || !project.type || !project.images || !project.about){
+      console.log("Not null indata was null, exiting");
+      return;
+    }
+    var projectObj = new Project(project);
+    favorites.push(projectObj);
+    return project;
+  };
+  Model.removeProject = function (project) {
+    if(!project.id){
+      console.log("id is null, can't remove project");
+      return;
+    }
+    var remove = Model.contains(project);
+    if(remove != -1){
+      favorites.splice(remove,1);
+    }else {
+      console.log("project is not in favorites");
+    }
+  };
+  Model.size = function() { return favorites.length; };
+  Model.getAll = function() { return favorites; };
+  Model.contains = function(project) {
+    var index = -1;
+    for(var i = 0; i<favorites.length; i++){
+      var curr = favorites[i];
+      if(curr.getId() == project.id){
+        index = i;
+        break;
+      }
+    }
+    return index;
+  }
+
+  return Model;
+});
+
 app.controller('LoadModel', function ($scope, $http, $rootScope) {
-
-
 
     $scope.url = 'php/getDbData.php'; // The url of the php-request
     $http.post($scope.url, {}) // Create the http post request
@@ -216,7 +255,7 @@ app.controller('LoadModel', function ($scope, $http, $rootScope) {
    }
  });
 
-var filterController = function ($scope, $rootScope, $modal, $log) {
+function filterController($scope, $rootScope, $modal, $log, Model) {
 
   $scope.open = function (chosenProject) {
 
@@ -245,11 +284,30 @@ var filterController = function ($scope, $rootScope, $modal, $log) {
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-var ModalInstanceController = function ($scope, $modalInstance, $rootScope, project) {
-
+var ModalInstanceController = function ($scope, $modalInstance, $rootScope, project, Model) {
   $scope.project = project;
   $scope.myInterval = 5000;
 
+  if(Model.contains(project) != -1) {
+    $scope.righImgDrag = "true";
+    $scope.righImgDrop = "false";
+    $scope.leftImgDrag = "false";
+    $scope.leftImgDrop = "true";
+
+    $scope.changeTextOnDrop = "<- <- <- Drag to remove from favorites";
+    $scope.changePic1 = "res/projekt/garbage.jpg";
+    $scope.changePic2 = "res/projekt/"+project.images[0];
+  }
+  else {
+    $scope.righImgDrag = "false";
+    $scope.righImgDrop = "true";
+    $scope.leftImgDrag = "true";
+    $scope.leftImgDrop = "false";
+
+    $scope.changeTextOnDrop = "Drag to att to favorites -> -> ->";
+    $scope.changePic1 = "res/projekt/"+project.images[0];
+    $scope.changePic2 = "res/projekt/star.jpg";
+  }
 
   $scope.close = function () {
     $modalInstance.dismiss('close');
@@ -259,4 +317,28 @@ var ModalInstanceController = function ($scope, $modalInstance, $rootScope, proj
     $rootScope.type = type;
   };
 
+  $scope.changeDragAndDrop = function() {
+    if(Model.contains(project) == -1) {
+      Model.addProject(project);
+      $scope.righImgDrag = "true";
+      $scope.righImgDrop = "false";
+      $scope.leftImgDrag = "false";
+      $scope.leftImgDrop = "true";
+
+      $scope.changeTextOnDrop = "<- <- <- Drag to remove from favorites";
+      $scope.changePic1 = "res/projekt/garbage.jpg";
+      $scope.changePic2 = "res/projekt/"+project.images[0];
+    }
+    else {
+      Model.removeProject(project);
+      $scope.righImgDrag = "false";
+      $scope.righImgDrop = "true";
+      $scope.leftImgDrag = "true";
+      $scope.leftImgDrop = "false";
+
+      $scope.changeTextOnDrop = "Drag to att to favorites -> -> ->";
+      $scope.changePic1 = "res/projekt/"+project.images[0];
+      $scope.changePic2 = "res/projekt/star.jpg";
+    }
+  }
 };
