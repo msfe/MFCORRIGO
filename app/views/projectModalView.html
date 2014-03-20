@@ -17,9 +17,9 @@
 
 	</div>
 	<div class="modal-footer">
-		<img ng-src = "res/projekt/{{project.images[0]}}" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="list1" jqyoui-draggable="{animate:true}" ng-hide="!list1.title" class = "modalfooterImage">{{list1.title}}
+		<img ng-src = {{changePic1}} data-drag={{leftImgDrag}} data-drop={{leftImgDrop}} ng-model="list1" jqyoui-draggable="{animate:true}" jqyoui-droppable = "{onDrop: 'changeDragAndDrop'}" class = "modalfooterImage">
 		<p class = "modalFooterText">{{changeTextOnDrop}}</p>
-		<img ng-src = "res/projekt/star.jpg" class="modalFooterFavorites" data-drop="true" data-jqyoui-options ng-model="list2" jqyoui-droppable style='height:50px;'>
+		<img ng-src = {{changePic2}} class="modalFooterFavorites" data-drag={{righImgDrag}} data-drop={{righImgDrop}} jqyoui-draggable="{animate:true}"  ng-model="list2" jqyoui-droppable = "{onDrop: 'changeDragAndDrop'}" style='height:50px;'>
 		<button class="btn btn-warning" ng-click="close()">Close</button>
 	</div>
 </div>

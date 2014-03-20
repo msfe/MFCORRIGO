@@ -83,22 +83,26 @@ app.factory('Model', function() {
       console.log("id is null, can't remove project");
       return;
     }
-    var remove = -1;
-    for(var i = 0; i<favorites.length; i++){
-      var curr = favorites[i];
-      if(curr.getId == project.id){
-        remove = i;
-        break;
-      }
-    }
+    var remove = Model.contains(project);
     if(remove != -1){
-      favorites.slice(remove,1);
+      favorites.splice(remove,1);
     }else {
       console.log("project is not in favorites");
     }
   };
   Model.size = function() { return favorites.length; };
   Model.getAll = function() { return favorites; };
+  Model.contains = function(project) {
+    var index = -1;
+    for(var i = 0; i<favorites.length; i++){
+      var curr = favorites[i];
+      if(curr.getId() == project.id){
+        index = i;
+        break;
+      }
+    }
+    return index;
+  }
 
   return Model;
 });
@@ -281,14 +285,29 @@ function filterController($scope, $rootScope, $modal, $log, Model) {
 // It is not the same as the $modal service used above.
 
 var ModalInstanceController = function ($scope, $modalInstance, $rootScope, project, Model) {
-
   $scope.project = project;
   $scope.myInterval = 5000;
-  $scope.list1 = {title: 'AngularJS - Drag Me'};
-  $scope.list2 = {};
-  $scope.changeTextOnDrop = "Drag to favorites -> -> ->";
-  // $scope.dragDropTextChanger = "Drag to add to favorites -> -> ->";
-  // $scope.dragDropImageChanger = "res/projekt/" + project.images[0];
+
+  if(Model.contains(project) != -1) {
+    $scope.righImgDrag = "true";
+    $scope.righImgDrop = "false";
+    $scope.leftImgDrag = "false";
+    $scope.leftImgDrop = "true";
+
+    $scope.changeTextOnDrop = "<- <- <- Drag to remove from favorites";
+    $scope.changePic1 = "res/projekt/garbage.jpg";
+    $scope.changePic2 = "res/projekt/"+project.images[0];
+  }
+  else {
+    $scope.righImgDrag = "false";
+    $scope.righImgDrop = "true";
+    $scope.leftImgDrag = "true";
+    $scope.leftImgDrop = "false";
+
+    $scope.changeTextOnDrop = "Drag to att to favorites -> -> ->";
+    $scope.changePic1 = "res/projekt/"+project.images[0];
+    $scope.changePic2 = "res/projekt/star.jpg";
+  }
 
   $scope.close = function () {
     $modalInstance.dismiss('close');
@@ -298,18 +317,28 @@ var ModalInstanceController = function ($scope, $modalInstance, $rootScope, proj
     $rootScope.type = type;
   };
 
-  // $scope.changeDragDropView = function(isFavorite) {
-  //   if(isFavorite) {
-  //     $scope.dragDropTextChanger = "<- <- <- Drag to remove from favorites";
-  //     $scope.dragDropImageChanger = "res/swedishflag.jpg"
-  //   }
-  //   else {
-  //     $scope.dragDropTextChanger = "Drag to att to favorites -> -> ->";
-  //     $scope.dragDropImageChanger = "res/projekt/" + project.images[0];
-  //   }
-  // }
-  $scope.hejalert = function() {
-    alert("heej");
-  }
+  $scope.changeDragAndDrop = function() {
+    if(Model.contains(project) == -1) {
+      Model.addProject(project);
+      $scope.righImgDrag = "true";
+      $scope.righImgDrop = "false";
+      $scope.leftImgDrag = "false";
+      $scope.leftImgDrop = "true";
 
+      $scope.changeTextOnDrop = "<- <- <- Drag to remove from favorites";
+      $scope.changePic1 = "res/projekt/garbage.jpg";
+      $scope.changePic2 = "res/projekt/"+project.images[0];
+    }
+    else {
+      Model.removeProject(project);
+      $scope.righImgDrag = "false";
+      $scope.righImgDrop = "true";
+      $scope.leftImgDrag = "true";
+      $scope.leftImgDrop = "false";
+
+      $scope.changeTextOnDrop = "Drag to att to favorites -> -> ->";
+      $scope.changePic1 = "res/projekt/"+project.images[0];
+      $scope.changePic2 = "res/projekt/star.jpg";
+    }
+  }
 };
