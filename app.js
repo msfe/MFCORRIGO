@@ -66,6 +66,43 @@ app.config(function($routeProvider) {
 	})
 });
 
+app.factory('Model', function() {
+  var Model = {};
+  var favorites = [];
+  Model.addProject = function (project) {
+    if(!project.id || !project.name || !project.type || !project.images || !project.about){
+      console.log("Not null indata was null, exiting");
+      return;
+    }
+    var projectObj = new Project(project);
+    favorites.push(projectObj);
+    return project;
+  };
+  Model.removeProject = function (project) {
+    if(!project.id){
+      console.log("id is null, can't remove project");
+      return;
+    }
+    var remove = -1;
+    for(var i = 0; i<favorites.length; i++){
+      var curr = favorites[i];
+      if(curr.getId == project.id){
+        remove = i;
+        break;
+      }
+    }
+    if(remove != -1){
+      favorites.slice(remove,1);
+    }else {
+      console.log("project is not in favorites");
+    }
+  };
+  Model.size = function() { return favorites.length; };
+  Model.getAll = function() { return favorites; };
+
+  return ListService;
+});
+
 app.controller('LoadModel', function ($scope, $http, $rootScope) {
 
 
