@@ -100,12 +100,10 @@ app.factory('Model', function() {
   Model.size = function() { return favorites.length; };
   Model.getAll = function() { return favorites; };
 
-  return ListService;
+  return Model;
 });
 
 app.controller('LoadModel', function ($scope, $http, $rootScope) {
-
-
 
     $scope.url = 'php/getDbData.php'; // The url of the php-request
     $http.post($scope.url, {}) // Create the http post request
@@ -253,7 +251,7 @@ app.controller('LoadModel', function ($scope, $http, $rootScope) {
    }
  });
 
-var filterController = function ($scope, $rootScope, $modal, $log) {
+function filterController($scope, $rootScope, $modal, $log, Model) {
 
   $scope.open = function (chosenProject) {
 
@@ -282,7 +280,7 @@ var filterController = function ($scope, $rootScope, $modal, $log) {
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $modal service used above.
 
-var ModalInstanceController = function ($scope, $modalInstance, $rootScope, project) {
+var ModalInstanceController = function ($scope, $modalInstance, $rootScope, project, Model) {
 
   $scope.project = project;
   $scope.myInterval = 5000;
