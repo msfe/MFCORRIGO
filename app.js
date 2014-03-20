@@ -310,7 +310,7 @@ var ModalInstanceController = function ($scope, $modalInstance, $rootScope, proj
 
     $scope.changeTextOnDrop = "Drag to att to favorites -> -> ->";
     $scope.changePic1 = "res/projekt/"+project.images[0];
-    $scope.changePic2 = "res/projekt/star.jpg";
+    $scope.changePic2 = "res/projekt/star.png";
   }
 
   $scope.close = function () {
@@ -342,7 +342,7 @@ var ModalInstanceController = function ($scope, $modalInstance, $rootScope, proj
 
       $scope.changeTextOnDrop = "Drag to att to favorites -> -> ->";
       $scope.changePic1 = "res/projekt/"+project.images[0];
-      $scope.changePic2 = "res/projekt/star.jpg";
+      $scope.changePic2 = "res/projekt/star.png";
     }
   }
 };

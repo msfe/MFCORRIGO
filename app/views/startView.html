@@ -1,32 +1,43 @@
 <div id ="startView" class="row">
 	<div class="span12">
-
-		<h1>Byggföretag med stor erfarenhet inom branschen</h1>
+		<h1 id = "servicesBiggestText">MFCorrigo AB</h1>
+		<h2 id = "servicesBigText">Ett byggföretag med stor erfarenhet inom branschen</h2>
 
 		<div class="row">
 			<div ng-controller="StartViewController">
-				<div class="col-md-6">
-					<div style="height: 305px">
-						<carousel interval="myInterval">
-							<slide ng-repeat="slide in slides" active="slide.active">
-								<img ng-src="{{slide.image}}" style="margin:auto;">
-								<div class="carousel-caption">
-									<h3>{{slide.text}}</h3>
-								</div>
-							</slide>
-						</carousel>
-					</div>
-				</div>
-				<div class="col-md-6">
-					Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-					<br />Enter a negative number to stop the interval.
-				</div>
-			</div>
+				<table id = "moreLeeeft"
+				<tr>
+					<td>
+						<div id = "moreLeeeft"><!-- class="col-md-6"> -->
+							<div style="height: 305px">
+								<carousel interval="myInterval">
+									<slide ng-repeat="slide in slides" active="slide.active">
+										<img ng-src="{{slide.image}}" style="margin:auto;">
+										<div class="carousel-caption">
+											<h2 id = "servicesMediumText">{{slide.text}}</h2>
+										</div>
+									</slide>
+								</carousel>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id = "moreLeeeft" class="col-md-6">
+							<h2 id = "servicesMediumText">Interval for the pictures in the carousel to the left.</h2>
+							<h2 id = "servicesMediumText"> Write the number of milliseconds you want each picture to be displayed:</h2>
+							<input type="number" class="form-control" ng-model="myInterval">
+						</div>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<br>
 		</div>
 	</div>
 	<div class="row">
 		<div class="span12">
-			<h2> Partners </h2>	
+			<h2 id = "servicesBigText">Partners</h2>
+			<br>	
 			<div class="row">
 				<div class="span3">		
 					<img ng-src="res/bygg-ole.png" class="img-responsive" alt="Responsive image">
@@ -37,4 +48,5 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
