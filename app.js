@@ -61,6 +61,10 @@ app.config(function($routeProvider) {
 		controller: 'filterController',
 		templateUrl:'app/views/projectView.html'
 	})
+    .when('/favorites', {
+    controller: 'filterController',
+    templateUrl:'app/views/projectView.html'
+  })
 	.otherwise({
 		redirectTo: '/'
 	})

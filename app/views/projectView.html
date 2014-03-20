@@ -22,6 +22,26 @@
                     </table>
                 </div>
             </div>
+            <div ng-repeat="(index, project) in Model.getAll" ngif="type=='favorites'">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <table class="buildingsPartey" ng-click="open(project)" onmouseover="this.style.background='#ddd'" onmouseout="this.style.background='#eee'">
+                        <tr>
+                            <td>
+                                <div class="imageWrapper">
+                                    <img ng-src="res/projekt/{{project.imgrefr}}" class="buildingPic">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    {{project.name}}
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
