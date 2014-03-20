@@ -249,7 +249,10 @@ var ModalInstanceController = function ($scope, $modalInstance, $rootScope, proj
 
   $scope.project = project;
   $scope.myInterval = 5000;
-
+  $scope.list1 = {title: 'AngularJS - Drag Me'};
+  $scope.list2 = {};
+  // $scope.dragDropTextChanger = "Drag to att to favorites -> -> ->";
+  // $scope.dragDropImageChanger = "res/projekt/" + project.images[0];
 
   $scope.close = function () {
     $modalInstance.dismiss('close');
@@ -258,5 +261,16 @@ var ModalInstanceController = function ($scope, $modalInstance, $rootScope, proj
   $scope.ChangeType = function(type){
     $rootScope.type = type;
   };
+
+  // $scope.changeDragDropView = function(isFavorite) {
+  //   if(isFavorite) {
+  //     $scope.dragDropTextChanger = "<- <- <- Drag to remove from favorites";
+  //     $scope.dragDropImageChanger = "res/swedishflag.jpg"
+  //   }
+  //   else {
+  //     $scope.dragDropTextChanger = "Drag to att to favorites -> -> ->";
+  //     $scope.dragDropImageChanger = "res/projekt/" + project.images[0];
+  //   }
+  // }
 
 };
