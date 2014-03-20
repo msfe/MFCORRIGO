@@ -16,7 +16,7 @@ $(function(){
       });
 });
 
-var app = angular.module('mfcorrigoApp', ['ngRoute', 'ui.bootstrap']);
+var app = angular.module('mfcorrigoApp', ['ngRoute', 'ui.bootstrap', 'ngDragDrop']);
 
 
 app.config(function($routeProvider) {
@@ -288,7 +288,8 @@ var ModalInstanceController = function ($scope, $modalInstance, $rootScope, proj
   $scope.myInterval = 5000;
   $scope.list1 = {title: 'AngularJS - Drag Me'};
   $scope.list2 = {};
-  // $scope.dragDropTextChanger = "Drag to att to favorites -> -> ->";
+  $scope.changeTextOnDrop = "Drag to favorites -> -> ->";
+  // $scope.dragDropTextChanger = "Drag to add to favorites -> -> ->";
   // $scope.dragDropImageChanger = "res/projekt/" + project.images[0];
 
   $scope.close = function () {
@@ -309,5 +310,8 @@ var ModalInstanceController = function ($scope, $modalInstance, $rootScope, proj
   //     $scope.dragDropImageChanger = "res/projekt/" + project.images[0];
   //   }
   // }
+  $scope.hejalert = function() {
+    alert("heej");
+  }
 
 };

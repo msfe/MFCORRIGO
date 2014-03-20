@@ -1,30 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-	<style>
-	#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
-	</style>
-	<script>
-	function allowDrop(ev)
-	{
-		ev.preventDefault();
-	}
-
-	function drag(ev)
-	{
-		ev.dataTransfer.setData("Text",ev.target.id);
-	}
-
-	function drop(ev)
-	{
-		changeDragDropView();
-		// alert("You dropped it!!");
-		// ev.preventDefault();
-		// var data=ev.dataTransfer.getData("Text");
-		// ev.target.appendChild(document.getElementById(data));
-	}
-	</script>
-</head> -->
 <div>
 	<div class="modal-header">
 		<h3 class="modalHeader">{{project.name}}</h3>
@@ -42,17 +17,10 @@
 
 	</div>
 	<div class="modal-footer">
-<!-- 		<img "removeImageOnDrop" draggable="true" data-drag="true" ondragstart="drag(event)" class = "modalfooterImage" ng-src={{dragDropImageChanger}}/>res/projekt/{{project.images[0]}}
-		<p class = "modalFooterText">{{dragDropTextChanger}}</p>
-		<img ondrop="drop(event)" ondragover="allowDrop(event)" class = "modalFooterFavorites" ng-src = "res/projekt/star.jpg"/>
-		<button class="btn btn-warning" ng-click="close()">Close</button> -->
-		<div class="btn btn-primary" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="list1" jqyoui-draggable="{animate:true}" ng-hide="!list1.title">{{list1.title}}</div>
-		<div class="thumbnail" data-drop="true" data-jqyoui-options ng-model="list2" jqyoui-droppable style='height:50px;'>
-			<div class="btn btn-success" data-drag="false" data-jqyoui-options ng-model="list2" jqyoui-draggable ng-hide="!list2.title">{{list2.title}}</div>
-		</div>
-		<!-- <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
-		<!-- <br>
-		<img id="drag1" src="res/projekt/exbild1.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69"> -->
+		<img ng-src = "res/projekt/{{project.images[0]}}" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="list1" jqyoui-draggable="{animate:true}" ng-hide="!list1.title" class = "modalfooterImage">{{list1.title}}
+		<p class = "modalFooterText">{{changeTextOnDrop}}</p>
+		<img ng-src = "res/projekt/star.jpg" class="modalFooterFavorites" data-drop="true" data-jqyoui-options ng-model="list2" jqyoui-droppable style='height:50px;'>
+		<button class="btn btn-warning" ng-click="close()">Close</button>
 	</div>
 </div>
-<!-- </html>
+</html>
