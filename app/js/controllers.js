@@ -125,9 +125,6 @@ angular.module('mfcorrigoApp.controllers', ['mfcorrigoApp.factories'])
     }
   };
 })
-.controller('MyCtrl2', function() {
-
-})
 .controller('LoadModel', function ($scope, $http, $rootScope) {
   var fakeDb = new FakeDb();
 

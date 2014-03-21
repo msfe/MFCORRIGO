@@ -50,7 +50,7 @@
 /* CAROUSEL
 -------------------------------------------------- */
 .carousel-container {
-    
+    height: 305px;
   }
   .carousel {    
     margin-bottom: 60px;

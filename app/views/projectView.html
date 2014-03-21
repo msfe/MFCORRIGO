@@ -3,7 +3,7 @@
         <h1 id = "servicesBiggestText">MFCorrigo AB</h1>
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
         <div class="row">
-            <div ng-repeat="(index, project) in data | filter:type">
+            <div ng-repeat="(index, project) in data | filter:type" ng-animate="'animate'">
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <table class="buildingsPartey" ng-click="open(project)" onmouseover="this.style.background='#ddd'" onmouseout="this.style.background='#eee'">
                         <tr>
