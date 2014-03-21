@@ -22,7 +22,7 @@ var app = angular.module('mfcorrigoApp', ['ngRoute', 'ui.bootstrap', 'ngDragDrop
 app.config(function($routeProvider) {
 	$routeProvider
 	.when('/', {
-		controller: '',
+		controller: 'StartViewController',
 		templateUrl:'app/views/startView.html'
 	})
 	.when('/about', {
@@ -277,7 +277,7 @@ function filterController($scope, $rootScope, $modal, $log, Model) {
 
     var modalInstance = $modal.open({
       templateUrl: 'app/views/projectModalView.html',
-      controller: ModalInstanceController,
+      controller: 'projectModalViewController',
       resolve: {
         project: function(){
           return chosenProject;
@@ -297,10 +297,7 @@ function filterController($scope, $rootScope, $modal, $log, Model) {
   };
 };
 
-// Please note that $modalInstance represents a modal window (instance) dependency.
-// It is not the same as the $modal service used above.
-
-var ModalInstanceController = function ($scope, $modalInstance, $rootScope, project, Model) {
+function projectModalViewController($scope, $modalInstance, $rootScope, project, Model) {
   $scope.project = project;
   $scope.myInterval = 5000;
 
@@ -320,7 +317,7 @@ var ModalInstanceController = function ($scope, $modalInstance, $rootScope, proj
     $scope.leftImgDrag = "true";
     $scope.leftImgDrop = "false";
 
-    $scope.changeTextOnDrop = "Drag to att to favorites -> -> ->";
+    $scope.changeTextOnDrop = "Drag to add to favorites -> -> ->";
     $scope.changePic1 = "res/projekt/"+project.images[0];
     $scope.changePic2 = "res/projekt/star.png";
   }
@@ -352,7 +349,7 @@ var ModalInstanceController = function ($scope, $modalInstance, $rootScope, proj
       $scope.leftImgDrag = "true";
       $scope.leftImgDrop = "false";
 
-      $scope.changeTextOnDrop = "Drag to att to favorites -> -> ->";
+      $scope.changeTextOnDrop = "Drag to add to favorites -> -> ->";
       $scope.changePic1 = "res/projekt/"+project.images[0];
       $scope.changePic2 = "res/projekt/star.png";
     }

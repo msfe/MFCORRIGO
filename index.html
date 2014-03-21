@@ -22,7 +22,7 @@
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#/projects">
 						Tidigare Projekt <span class="caret"></span>
 					</a>
-					<ul class="dropdown-menu" role="menu" ng-controller="filterController">
+					<ul class="dropdown-menu" role="menu" ng-controller="FilterController">
 						<li><a href="#/allProjects" ng-click="ChangeType('')">Alla projekt</a></li>
 						<li class="divider"></li>
 						<li><a href="#/buildings" ng-click="ChangeType('buildings')">Våra byggnader</a></li>
@@ -61,11 +61,11 @@
 	<script src="libs/angular-1.2.14-dist/angular-route.min.js"></script>
 	<script src="libs/angular-1.2.14-dist/angular-animate.min.js"></script>
 	<script src="libs/angular-1.2.14-dist/angular-touch.min.js"></script>
-	<script src="app.js"></script>
 	<script src="libs/angular-1.2.14-dist/ui-bootstrap-tpls-0.10.0.js"></script>
-	<script src="app/controllers/startViewController.js"></script>
 	<script src="libs/angular-1.2.14-dist/angular-dragdrop.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-	<script src="js/model.js"></script>
+	<script src="app/js/factories.js"></script>
+	<script src="app/js/controllers.js"></script>
+	<script src="app/js/app.js"></script>
 </body>
 </html>
