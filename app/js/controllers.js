@@ -8,27 +8,27 @@ angular.module('mfcorrigoApp.controllers', ['mfcorrigoApp.factories'])
   $scope.myInterval = 5000;
   $scope.slides = [
   {
-    image:"res/projekt/exbild1.jpg",
+    image:"res/projects/exbild1.jpg",
     text: 'Över 6000 kvm nyproducerade ytor'
   },
   {
-    image:"res/projekt/exbild2.jpg",
+    image:"res/projects/exbild2.jpg",
     text: 'Över 3100 kvm totalt renoverade ytor'
   },
   {
-    image:"res/projekt/exbild3.jpg",
+    image:"res/projects/exbild3.jpg",
     text: '90 stycken moderna badrum'
   },
   {
-    image:"res/projekt/exbild5.jpg",
+    image:"res/projects/exbild5.jpg",
     text: '37 stycken fristående arkitektritade bostadshus'
   },
   {
-    image:"res/projekt/exbild6.jpg",
+    image:"res/projects/exbild6.jpg",
     text: 'Över 6000 kvm nyproducerade ytor'
   },
   {
-    image:"res/projekt/exbild7.jpg",
+    image:"res/projects/exbild7.jpg",
     text: 'Fler än 30 stycken tillbyggnader'
   }];
 })
@@ -80,8 +80,8 @@ angular.module('mfcorrigoApp.controllers', ['mfcorrigoApp.factories'])
     $scope.leftImgDrop = "true";
 
     $scope.changeTextOnDrop = "<- <- <- Drag to remove from favorites";
-    $scope.changePic1 = "res/projekt/garbage.jpg";
-    $scope.changePic2 = "res/projekt/"+project.images[0];
+    $scope.changePic1 = "res/projects/garbage.jpg";
+    $scope.changePic2 = "res/projects/"+project.images[0];
   }
   else {
     $scope.righImgDrag = "false";
@@ -90,8 +90,8 @@ angular.module('mfcorrigoApp.controllers', ['mfcorrigoApp.factories'])
     $scope.leftImgDrop = "false";
 
     $scope.changeTextOnDrop = "Drag to add to favorites -> -> ->";
-    $scope.changePic1 = "res/projekt/"+project.images[0];
-    $scope.changePic2 = "res/projekt/star.png";
+    $scope.changePic1 = "res/projects/"+project.images[0];
+    $scope.changePic2 = "res/projects/star.png";
   }
 
   $scope.close = function () {
@@ -111,8 +111,8 @@ angular.module('mfcorrigoApp.controllers', ['mfcorrigoApp.factories'])
       $scope.leftImgDrop = "true";
 
       $scope.changeTextOnDrop = "<- <- <- Drag to remove from favorites";
-      $scope.changePic1 = "res/projekt/garbage.jpg";
-      $scope.changePic2 = "res/projekt/"+project.images[0];
+      $scope.changePic1 = "res/projects/garbage.jpg";
+      $scope.changePic2 = "res/projects/"+project.images[0];
     }
     else {
       Model.removeProject(project);
@@ -122,8 +122,8 @@ angular.module('mfcorrigoApp.controllers', ['mfcorrigoApp.factories'])
       $scope.leftImgDrop = "false";
 
       $scope.changeTextOnDrop = "Drag to add to favorites -> -> ->";
-      $scope.changePic1 = "res/projekt/"+project.images[0];
-      $scope.changePic2 = "res/projekt/star.png";
+      $scope.changePic1 = "res/projects/"+project.images[0];
+      $scope.changePic2 = "res/projects/star.png";
     }
   };
 })
